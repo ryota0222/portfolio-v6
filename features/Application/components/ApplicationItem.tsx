@@ -13,7 +13,7 @@ export const ApplicationItem = memo<IApplicationItem>(
         rel="noopener noreferrer"
         className="card"
       >
-        <div className="border border-zinc-200 rounded-2xl overflow-hidden">
+        <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden">
           <Image
             src={thumbnailUrl}
             alt="サムネイル画像"

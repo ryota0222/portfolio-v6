@@ -1,9 +1,9 @@
 export interface IArticleItem {
-  title: string;
-  content: string;
   url: string;
+  title: string;
+  description: string;
   date: string;
-  thumbnail: string;
+  siteName: string;
   favicon: string;
-  site: "zenn" | "qiita" | "note";
+  thumbnail: string;
 }

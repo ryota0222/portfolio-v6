@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Image } from "@nextui-org/react";
 
 export const ArticleItem = memo<IArticleItem>(
-  ({ title, url, thumbnail, favicon, site }) => {
+  ({ title, url, thumbnail, favicon, siteName }) => {
     return (
       <Link
         href={url}
@@ -12,7 +12,7 @@ export const ArticleItem = memo<IArticleItem>(
         rel="noopener noreferrer"
         className="card"
       >
-        <div className="border border-zinc-200 rounded-2xl overflow-hidden">
+        <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden">
           <Image
             src={thumbnail}
             alt="サムネイル画像"
@@ -26,13 +26,13 @@ export const ArticleItem = memo<IArticleItem>(
         <div className="mt-2 flex gap-2 items-center">
           <Image
             src={favicon}
-            alt={`${site}のアイコン`}
+            alt={`${siteName}のアイコン`}
             width={20}
             height={20}
-            title={site}
+            title={siteName}
             radius="none"
           />
-          <span>{site}</span>
+          <span>{siteName}</span>
         </div>
       </Link>
     );
