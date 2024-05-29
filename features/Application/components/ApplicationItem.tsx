@@ -7,7 +7,12 @@ import { ApplicationType } from "../constants";
 export const ApplicationItem = memo<IApplicationItem>(
   ({ name, link, type, thumbnailUrl, skills }) => {
     return (
-      <Link href={link} target="_blank" rel="noopener noreferrer">
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="card"
+      >
         <div className="border border-zinc-200 rounded-2xl overflow-hidden">
           <Image
             src={thumbnailUrl}
@@ -18,8 +23,8 @@ export const ApplicationItem = memo<IApplicationItem>(
             sizes="min(100%, 450px)"
           />
         </div>
-        <div className="mt-2 flex gap-2">
-          <span>{name}</span>
+        <div className="mt-2 flex gap-2 items-center">
+          <span className="sm:text-md text-sm">{name}</span>
           {type.map((t) => (
             <span
               key={t}
@@ -39,7 +44,7 @@ export const ApplicationItem = memo<IApplicationItem>(
             </span>
           ))}
         </div>
-        <div className="mt-2 flex gap-2">
+        <div className="sm:mt-2 mt-3 flex gap-2">
           {skills.map((skill) => (
             <Image
               src={skill.image}
