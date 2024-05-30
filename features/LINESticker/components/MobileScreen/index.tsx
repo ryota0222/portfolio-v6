@@ -1,7 +1,5 @@
-import { Image } from "@nextui-org/react";
 import { memo, useState } from "react";
 import { StickerType } from "../../types";
-import { StickerCard } from "../StickerCard";
 import { SnapStickyItem } from "./SnapStickyItem";
 
 export const MobileScreen = memo(() => {
