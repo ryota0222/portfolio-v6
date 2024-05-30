@@ -1,6 +1,7 @@
 import { title, subtitle } from "@/cores/primitives";
-import { EngineerSectionView } from "@/features/EngineerSectionView";
+import { EngineerSection } from "@/features/EngineerSection";
 import { FirstView } from "@/features/FirstView";
+import { HobbySection } from "@/features/HobbySection";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
@@ -10,7 +11,10 @@ export default function IndexPage() {
         <FirstView />
       </section>
       <section className="container mx-auto max-w-5xl px-6 flex-grow">
-        <EngineerSectionView />
+        <EngineerSection />
+      </section>
+      <section className="w-full sm:mt-48 mt-32">
+        <HobbySection />
       </section>
     </DefaultLayout>
   );

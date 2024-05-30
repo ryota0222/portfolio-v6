@@ -5,3 +5,8 @@
 .card {
     width: min(100%, 450px);
 }
+
+.sticker-card:hover .hover-button {
+    opacity: 1;
+    transition: all 0.3s;
+}
