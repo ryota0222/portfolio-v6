@@ -2,7 +2,7 @@ import { Image } from "@nextui-org/react";
 import { PropsWithChildren, memo } from "react";
 
 interface Props {
-  color: "pink" | "blue" | "yellow" | "green" | "red";
+  color: "pink" | "blue" | "yellow" | "green" | "red" | "line";
 }
 
 export const SectionSubTitle = memo<PropsWithChildren<Props>>(
@@ -45,6 +45,14 @@ export const SectionSubTitle = memo<PropsWithChildren<Props>>(
           {color === "red" && (
             <Image
               src="/images/gradient-red.webp"
+              radius="lg"
+              width={40}
+              height={40}
+            />
+          )}
+          {color === "line" && (
+            <Image
+              src="/images/share/line.png"
               radius="lg"
               width={40}
               height={40}
