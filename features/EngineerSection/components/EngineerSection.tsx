@@ -1,15 +1,13 @@
 import { SectionSubTitle } from "@/cores/SectionSubTitle";
 import { SectionTitle } from "@/cores/SectionTitle";
-import { RightUpArrowIcon } from "@/cores/icons";
 import { ApplicationList } from "@/features/Application";
 import { ArticleList } from "@/features/Article";
 import { CareerList } from "@/features/Career";
 import { PresentationMaterialList } from "@/features/PresentationMaterial";
-import { ReadMoreButton } from "@/features/ReadMoreButton";
-import { Button } from "@nextui-org/button";
+import { LinkButton } from "@/features/LinkButton";
 import { memo } from "react";
 
-export const EngineerSectionView = memo(() => {
+export const EngineerSection = memo(() => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <SectionTitle index={1}>Engineering</SectionTitle>
@@ -38,13 +36,17 @@ export const EngineerSectionView = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="red">Article</SectionSubTitle>
           <div className="hidden sm:block">
-            <ReadMoreButton href="/" />
+            <LinkButton href="/" type="bordered">
+              Read more
+            </LinkButton>
           </div>
         </div>
         <div className="mt-10">
           <ArticleList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <ReadMoreButton href="/" />
+            <LinkButton href="/" type="bordered">
+              Read more
+            </LinkButton>
           </div>
         </div>
       </section>
@@ -55,13 +57,17 @@ export const EngineerSectionView = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="green">Presentation material</SectionSubTitle>
           <div className="hidden sm:block">
-            <ReadMoreButton href="/" />
+            <LinkButton href="/" type="bordered">
+              Read more
+            </LinkButton>
           </div>
         </div>
         <div className="mt-10">
           <PresentationMaterialList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <ReadMoreButton href="/" />
+            <LinkButton href="/" type="bordered">
+              Read more
+            </LinkButton>
           </div>
         </div>
       </section>
