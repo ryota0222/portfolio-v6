@@ -1,6 +1,5 @@
 {
   "name": "next-pages-template",
-  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
-    "fetch-assets": "yarn node --loader ts-node/esm ./scripts/fetchAssets.ts"
+    "fetch-assets": "yarn node --loader ts-node/esm ./scripts/fetchAssets.mjs"
   },
   "dependencies": {
     "@nextui-org/button": "^2.0.31",
@@ -16,6 +15,8 @@
     "@nextui-org/system": "^2.1.2",
     "@nextui-org/theme": "^2.2.3",
     "@react-aria/visually-hidden": "^3.8.10",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",

@@ -6,6 +6,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useRouter } from "next/router";
 
 import "@/styles/globals.css";
+import "@splidejs/react-splide/css";
 
 const lineSeedJP = localFont({
   src: [
