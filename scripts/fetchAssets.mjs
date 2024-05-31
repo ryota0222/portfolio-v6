@@ -4,24 +4,11 @@ import axios from "axios";
 import { load } from "cheerio";
 import Parser from "rss-parser";
 
-interface CustomItem {
-  "media:thumbnail": string;
-  image: string;
-}
-
-const parser = new Parser<unknown, CustomItem>({
+const parser = new Parser({
   customFields: {
     item: [["media:thumbnail", "image"]],
   },
 });
-
-interface AssetItem {
-  title?: string;
-  content?: string;
-  url?: string;
-  date?: string;
-  thumbnail?: string;
-}
 
 const rssFeed = {
   zenn: {
@@ -42,11 +29,11 @@ const rssFeed = {
 };
 
 // URLからOGP情報を取得する関数
-async function fetchOGPImage(url: string) {
+async function fetchOGPImage(url) {
   try {
     const { data } = await axios.get(url);
     const $ = load(data);
-    let image: string | null = null;
+    let image = null;
     $("meta").each((i, elem) => {
       if (
         $(elem).attr("property") &&
@@ -64,15 +51,15 @@ async function fetchOGPImage(url: string) {
 
 try {
   console.log("🌟 Fetch RSS");
-  const jsonFeed: Record<string, AssetItem[]> = {};
+  const jsonFeed = {};
   for (const [site, info] of Object.entries(rssFeed)) {
     // RSSのデータ取得
     const feed = await parser.parseURL(info.url);
-    const _items: any = [];
+    const _items = [];
 
     for (const i of feed.items) {
       if (site === "qiita") {
-        const image = await fetchOGPImage(i.link as string);
+        const image = await fetchOGPImage(i.link);
         _items.push({
           url: i.link,
           title: i.title,
