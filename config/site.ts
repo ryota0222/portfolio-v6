@@ -40,4 +40,5 @@ export const siteConfig = {
     zenn: "https://zenn.dev/ryota0222",
     note: "https://note.com/ryotanny",
   },
+  url: "https://portfolio.site.ryotanny.com",
 };

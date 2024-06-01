@@ -1,6 +1,7 @@
 import { SectionSubTitle } from "@/cores/SectionSubTitle";
 import { SectionTitle } from "@/cores/SectionTitle";
 import { LINESticker } from "@/features/LINESticker";
+import { SharePortfolioSection } from "@/features/SharePortfolioSection";
 import { TShirtList } from "@/features/TShirt";
 import { memo } from "react";
 
@@ -34,6 +35,12 @@ export const HobbySection = memo(() => {
         <div className="mt-16 flex justify-center w-full">
           <TShirtList />
         </div>
+      </section>
+      {/*
+       * Share
+       */}
+      <section className="container mx-auto max-w-5xl px-6 flex-grow my-28 sm:my-60">
+        <SharePortfolioSection isLast={false} />
       </section>
     </div>
   );
