@@ -3,10 +3,36 @@
 @tailwind utilities;
 
 .card {
-    width: min(100%, 450px);
+  width: min(100%, 450px);
 }
 
 .sticker-card:hover .hover-button {
-    opacity: 1;
-    transition: all 0.3s;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.full-height-without-header {
+  height: calc(100dvh - 64px);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  font-weight: bold;
+  background: linear-gradient(270deg, #f871a0, #f9c97c, #74dfa2, #7ee7fc, #66aaf9, #ae7ede, #ff95e1);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 12s ease infinite;
 }
