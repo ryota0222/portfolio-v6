@@ -1,7 +1,7 @@
-import { title, subtitle } from "@/cores/primitives";
 import { EngineerSection } from "@/features/EngineerSection";
 import { FirstView } from "@/features/FirstView";
 import { HobbySection } from "@/features/HobbySection";
+import { PerformanceScreen } from "@/features/PerformanceScreen";
 import DefaultLayout from "@/layouts/default";
 import { Image } from "@nextui-org/react";
 
@@ -24,7 +24,11 @@ export default function IndexPage() {
         className="w-full"
         radius="none"
       />
-      <div className="py-24 bg-zinc-800"></div>
+      <div className="py-24 bg-zinc-800">
+        <section className="container mx-auto max-w-5xl px-6 flex-grow">
+          <PerformanceScreen />
+        </section>
+      </div>
     </DefaultLayout>
   );
 }
