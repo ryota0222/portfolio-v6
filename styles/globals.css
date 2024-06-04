@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .card {
-  width: min(100%, 450px);
+  width: fit-content;
 }
 
 .sticker-card:hover .hover-button {
