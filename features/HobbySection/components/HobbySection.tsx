@@ -27,9 +27,9 @@ export const HobbySection = memo(() => {
         <div className="container mx-auto max-w-5xl px-6 flex-grow">
           <SectionSubTitle color="yellow">T-shirt</SectionSubTitle>
           <p className="my-6">
-            On sale at UNIQLO's UTme!
+            On sale at UNIQLO&apos;s UTme!
             <br />
-            It's UNIQLO clothing, so it's very comfortable to wear✨
+            It&apos;s UNIQLO clothing, so it&apos;s very comfortable to wear✨
           </p>
         </div>
         <div className="mt-16 flex justify-center w-full">
@@ -39,7 +39,7 @@ export const HobbySection = memo(() => {
       {/*
        * Share
        */}
-      <section className="container mx-auto max-w-5xl px-6 flex-grow my-28 sm:my-60">
+      <section className="container mx-auto max-w-5xl px-6 flex-grow mt-24 mb-16 sm:my-60">
         <SharePortfolioSection isLast={false} />
       </section>
     </div>
