@@ -1,11 +1,11 @@
-import { SectionSubTitle } from "@/cores/SectionSubTitle";
-import { SectionTitle } from "@/cores/SectionTitle";
-import { ApplicationList } from "@/features/Application";
-import { ArticleList } from "@/features/Article";
-import { CareerList } from "@/features/Career";
-import { PresentationMaterialList } from "@/features/PresentationMaterial";
-import { LinkButton } from "@/features/LinkButton";
-import { memo } from "react";
+import { SectionSubTitle } from '@/cores/SectionSubTitle';
+import { SectionTitle } from '@/cores/SectionTitle';
+import { ApplicationList } from '@/features/Application';
+import { ArticleList } from '@/features/Article';
+import { CareerList } from '@/features/Career';
+import { PresentationMaterialList } from '@/features/PresentationMaterial';
+import { LinkButton } from '@/features/LinkButton';
+import { memo } from 'react';
 
 export const EngineerSection = memo(() => {
   return (
@@ -36,7 +36,7 @@ export const EngineerSection = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="red">Article</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton href="/" type="bordered">
+            <LinkButton href="/assets" type="bordered">
               Read more
             </LinkButton>
           </div>
@@ -44,7 +44,7 @@ export const EngineerSection = memo(() => {
         <div className="mt-10">
           <ArticleList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton href="/" type="bordered">
+            <LinkButton href="/assets" type="bordered">
               Read more
             </LinkButton>
           </div>
@@ -57,7 +57,7 @@ export const EngineerSection = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="green">Presentation material</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton href="/" type="bordered">
+            <LinkButton href="/assets/presentation" type="bordered">
               Read more
             </LinkButton>
           </div>
@@ -65,7 +65,7 @@ export const EngineerSection = memo(() => {
         <div className="mt-10">
           <PresentationMaterialList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton href="/" type="bordered">
+            <LinkButton href="/assets/presentation" type="bordered">
               Read more
             </LinkButton>
           </div>
