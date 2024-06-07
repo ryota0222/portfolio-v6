@@ -22,7 +22,7 @@ export const PsiDescriptionItem = memo<Props>(({ data }) => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
       // 10%が表示されたときにトリガー
     );
 

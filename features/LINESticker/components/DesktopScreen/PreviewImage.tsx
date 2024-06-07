@@ -1,5 +1,5 @@
-import { Image } from "@nextui-org/react";
-import { memo } from "react";
+import { Image } from '@nextui-org/react';
+import { memo } from 'react';
 
 interface Props {
   src: string;
@@ -7,7 +7,5 @@ interface Props {
 }
 
 export const PreviewImage = memo<Props>(({ src, selected }) => {
-  return (
-    <Image src={src} width={300} className={selected ? "block" : "hidden"} />
-  );
+  return <Image className={selected ? 'block' : 'hidden'} src={src} width={300} />;
 });

@@ -1,1 +1,1 @@
-export * from "./components/ApplicationList";
+export * from './components/ApplicationList';

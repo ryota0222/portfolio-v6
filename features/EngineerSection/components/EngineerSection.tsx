@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { SectionSubTitle } from '@/cores/SectionSubTitle';
 import { SectionTitle } from '@/cores/SectionTitle';
 import { ApplicationList } from '@/features/Application';
@@ -5,7 +7,6 @@ import { ArticleList } from '@/features/Article';
 import { CareerList } from '@/features/Career';
 import { PresentationMaterialList } from '@/features/PresentationMaterial';
 import { LinkButton } from '@/features/LinkButton';
-import { memo } from 'react';
 
 export const EngineerSection = memo(() => {
   return (

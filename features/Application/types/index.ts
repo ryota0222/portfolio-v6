@@ -1,4 +1,4 @@
-import { ApplicationType } from "../constants";
+import { ApplicationType } from '../constants';
 
 export interface IApplicationItem {
   name: string;
@@ -6,7 +6,7 @@ export interface IApplicationItem {
   type: ApplicationType[];
   thumbnailUrl: string;
   skills: {
-    name: string;
-    image: string;
+    name: string,
+    image: string,
   }[];
 }

@@ -1,66 +1,22 @@
-import { Image } from "@nextui-org/react";
-import { PropsWithChildren, memo } from "react";
+import { Image } from '@nextui-org/react';
+import { PropsWithChildren, memo } from 'react';
 
 interface Props {
-  color: "pink" | "blue" | "yellow" | "green" | "red" | "line";
+  color: 'pink' | 'blue' | 'yellow' | 'green' | 'red' | 'line';
 }
 
-export const SectionSubTitle = memo<PropsWithChildren<Props>>(
-  ({ color, children }) => {
-    return (
-      <div className="flex gap-2 items-center">
-        <span role="presentation" aria-hidden>
-          {color === "pink" && (
-            <Image
-              src="/images/gradient-pink.webp"
-              radius="lg"
-              width={40}
-              height={40}
-            />
-          )}
-          {color === "blue" && (
-            <Image
-              src="/images/gradient-blue.webp"
-              radius="lg"
-              width={40}
-              height={40}
-            />
-          )}
-          {color === "yellow" && (
-            <Image
-              src="/images/gradient-yellow.webp"
-              radius="lg"
-              width={40}
-              height={40}
-            />
-          )}
-          {color === "green" && (
-            <Image
-              src="/images/gradient-green.webp"
-              radius="lg"
-              width={40}
-              height={40}
-            />
-          )}
-          {color === "red" && (
-            <Image
-              src="/images/gradient-red.webp"
-              radius="lg"
-              width={40}
-              height={40}
-            />
-          )}
-          {color === "line" && (
-            <Image
-              src="/images/share/line.png"
-              radius="lg"
-              width={40}
-              height={40}
-            />
-          )}
-        </span>
-        <h2 className="sm:text-3xl text-2xl font-semibold">{children}</h2>
-      </div>
-    );
-  }
-);
+export const SectionSubTitle = memo<PropsWithChildren<Props>>(({ color, children }) => {
+  return (
+    <div className="flex gap-2 items-center">
+      <span aria-hidden role="presentation">
+        {color === 'pink' && <Image height={40} radius="lg" src="/images/gradient-pink.webp" width={40} />}
+        {color === 'blue' && <Image height={40} radius="lg" src="/images/gradient-blue.webp" width={40} />}
+        {color === 'yellow' && <Image height={40} radius="lg" src="/images/gradient-yellow.webp" width={40} />}
+        {color === 'green' && <Image height={40} radius="lg" src="/images/gradient-green.webp" width={40} />}
+        {color === 'red' && <Image height={40} radius="lg" src="/images/gradient-red.webp" width={40} />}
+        {color === 'line' && <Image height={40} radius="lg" src="/images/share/line.png" width={40} />}
+      </span>
+      <h2 className="sm:text-3xl text-2xl font-semibold">{children}</h2>
+    </div>
+  );
+});

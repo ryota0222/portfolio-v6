@@ -1,22 +1,23 @@
 import { memo } from 'react';
-import { IArticleItem } from '../types';
 import Link from 'next/link';
 import { Image } from '@nextui-org/react';
 
+import { IArticleItem } from '../types';
+
 export const ArticleItem = memo<IArticleItem>(({ title, url, thumbnail, favicon, siteName }) => {
   return (
-    <Link href={url} target="_blank" rel="noopener noreferrer" className="card">
+    <Link className="card" href={url} rel="noopener noreferrer" target="_blank">
       <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-fit">
         <Image
-          src={thumbnail}
-          alt="サムネイル画像"
           isZoomed
+          alt="サムネイル画像"
           className="w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]"
+          src={thumbnail}
         />
       </div>
       <div className="mt-2 w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]">{title}</div>
       <div className="mt-2 flex gap-2 items-center">
-        <Image src={favicon} alt={`${siteName}のアイコン`} width={20} height={20} title={siteName} radius="none" />
+        <Image alt={`${siteName}のアイコン`} height={20} radius="none" src={favicon} title={siteName} width={20} />
         <span>{siteName}</span>
       </div>
     </Link>

@@ -1,1 +1,1 @@
-export * from "./components/HobbySection";
+export * from './components/HobbySection';

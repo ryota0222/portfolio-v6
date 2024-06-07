@@ -1,6 +1,7 @@
-import { memo } from "react";
-import { DesktopScreen } from "./DesktopScreen";
-import { MobileScreen } from "./MobileScreen";
+import { memo } from 'react';
+
+import { DesktopScreen } from './DesktopScreen';
+import { MobileScreen } from './MobileScreen';
 
 export const LINESticker = memo(() => {
   return (

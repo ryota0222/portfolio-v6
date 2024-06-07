@@ -1,1 +1,1 @@
-export * from "./components/TShirtList";
+export * from './components/TShirtList';

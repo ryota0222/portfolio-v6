@@ -1,6 +1,8 @@
 import { memo, useMemo } from 'react';
-import { AssetTitle } from './AssetTitle';
 import { usePathname } from 'next/navigation';
+
+import { AssetTitle } from './AssetTitle';
+
 import RssData from '@/data/rss.json';
 import { ArticleItem } from '@/features/Article';
 import { SlideData } from '@/features/PresentationMaterial/constants';
@@ -11,9 +13,11 @@ export const AssetList = memo(() => {
   const latestData = useMemo(() => {
     // RssDataをコピー
     const totalData = JSON.parse(JSON.stringify(RssData)) as Record<string, IPresentationMaterialItem[]>;
+
     totalData['presentation'] = JSON.parse(JSON.stringify(SlideData));
     totalData['all'] = [...totalData['all'], ...SlideData];
     let list = totalData['all'];
+
     if (pathname === '/assets/zenn') {
       list = totalData['zenn'];
     }
@@ -29,9 +33,12 @@ export const AssetList = memo(() => {
     list.sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
+
     return list;
   }, []);
+
   console.log(pathname);
+
   return (
     <>
       <AssetTitle />

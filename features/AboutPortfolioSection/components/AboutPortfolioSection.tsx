@@ -1,8 +1,9 @@
+import { Image } from '@nextui-org/react';
+import { memo } from 'react';
+
 import { ChangelogSection } from '@/features/ChangelogSection';
 import { PerformanceScreen } from '@/features/PerformanceScreen';
 import { SharePortfolioSection } from '@/features/SharePortfolioSection';
-import { Image } from '@nextui-org/react';
-import { memo } from 'react';
 
 export const AboutPortfolioSection = memo(() => {
   return (

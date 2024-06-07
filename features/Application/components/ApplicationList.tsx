@@ -1,6 +1,8 @@
-import { memo } from "react";
-import { ApplicationData } from "../constants";
-import { ApplicationItem } from "./ApplicationItem";
+import { memo } from 'react';
+
+import { ApplicationData } from '../constants';
+
+import { ApplicationItem } from './ApplicationItem';
 
 export const ApplicationList = memo(() => {
   return (

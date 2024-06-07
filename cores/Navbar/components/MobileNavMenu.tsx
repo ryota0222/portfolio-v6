@@ -1,13 +1,7 @@
-import {
-  Link,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-} from "@nextui-org/react";
+import { Link, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarMenuItem } from '@nextui-org/react';
+import { memo } from 'react';
 
-import { siteConfig } from "@/config/site";
-import { memo } from "react";
+import { siteConfig } from '@/config/site';
 
 export const MobileNavMenu = memo(() => (
   <>
@@ -20,13 +14,7 @@ export const MobileNavMenu = memo(() => (
         {siteConfig.navMenuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === siteConfig.navMenuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
+              color={index === 2 ? 'primary' : index === siteConfig.navMenuItems.length - 1 ? 'danger' : 'foreground'}
               href="#"
               size="lg"
             >

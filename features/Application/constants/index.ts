@@ -1,16 +1,16 @@
 export enum ApplicationType {
-  mobile = 'Mobile',
-  web = 'Web',
-  pwa = 'PWA',
-  line = 'LINE',
-  figma = 'Figma',
+  Mobile = 'Mobile',
+  Web = 'Web',
+  Pwa = 'PWA',
+  Line = 'LINE',
+  Figma = 'Figma',
 }
 
 export const ApplicationData = [
   {
     name: 'FigTodo',
     link: 'https://www.figma.com/community/plugin/1376174862254820112',
-    type: [ApplicationType.figma],
+    type: [ApplicationType.Figma],
     thumbnailUrl: '/images/services/figtodo.webp',
     skills: [
       {
@@ -26,7 +26,7 @@ export const ApplicationData = [
   {
     name: 'TimeShare',
     link: 'https://time-share.site.ryotanny.com',
-    type: [ApplicationType.web, ApplicationType.pwa],
+    type: [ApplicationType.Web, ApplicationType.Pwa],
     thumbnailUrl: '/images/services/timeshare.webp',
     skills: [
       {
@@ -50,7 +50,7 @@ export const ApplicationData = [
   {
     name: '旧ポートフォリオ',
     link: 'https://portfolio.site.ryotanny.com',
-    type: [ApplicationType.web, ApplicationType.pwa],
+    type: [ApplicationType.Web, ApplicationType.Pwa],
     thumbnailUrl: '/images/services/portfolio.webp',
     skills: [
       {
@@ -66,7 +66,7 @@ export const ApplicationData = [
   {
     name: '瞑想Time',
     link: 'https://apps.apple.com/jp/app/%E7%9E%91%E6%83%B3time/id6475310806',
-    type: [ApplicationType.mobile],
+    type: [ApplicationType.Mobile],
     thumbnailUrl: '/images/services/meiso.webp',
     skills: [
       {
@@ -102,7 +102,7 @@ export const ApplicationData = [
   {
     name: 'Polaris',
     link: 'https://public-ryotanny.notion.site/Polaris-ea3e411dfeaa46629862bf6080a00c40?pvs=4',
-    type: [ApplicationType.line],
+    type: [ApplicationType.Line],
     thumbnailUrl: '/images/services/polaris.webp',
     skills: [
       {
@@ -122,7 +122,7 @@ export const ApplicationData = [
   {
     name: 'Tetris',
     link: 'https://w-tetris.site.ryotanny.com/',
-    type: [ApplicationType.web, ApplicationType.pwa],
+    type: [ApplicationType.Web, ApplicationType.Pwa],
     thumbnailUrl: '/images/services/w-tetris.webp',
     skills: [
       {

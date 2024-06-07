@@ -1,15 +1,8 @@
-import {
-  Link,
-  Navbar as NextUINavbar,
-  NavbarContent,
-  NavbarBrand,
-  NavbarItem,
-  Image,
-} from "@nextui-org/react";
-import NextLink from "next/link";
+import { Link, Navbar as NextUINavbar, NavbarContent, NavbarBrand, NavbarItem, Image } from '@nextui-org/react';
+import NextLink from 'next/link';
+import { memo } from 'react';
 
-import { siteConfig } from "@/config/site";
-import { memo } from "react";
+import { siteConfig } from '@/config/site';
 
 export const Navbar = memo(() => {
   return (
@@ -17,19 +10,19 @@ export const Navbar = memo(() => {
       <NavbarContent justify="start">
         <NavbarBrand>
           <NextLink href="/">
-            <Image src="/images/logo.svg" alt="logo" width={24} height={24} />
+            <Image alt="logo" height={24} src="/images/logo.svg" width={24} />
           </NextLink>
         </NavbarBrand>
         <NavbarItem className="flex gap-2 items-center">
           <span className="text-sm">Contact</span>
           <Link isExternal href={siteConfig.links.twitter}>
-            <Image src="/images/x.svg" alt="logo" width={32} height={32} />
+            <Image alt="logo" height={32} src="/images/x.svg" width={32} />
           </Link>
         </NavbarItem>
         <NavbarItem className="flex gap-2 items-center">
           <span className="text-sm">Online Talk</span>
           <Link isExternal href={siteConfig.links.pitta}>
-            <Image src="/images/pitta.webp" alt="logo" width={86} height={32} />
+            <Image alt="logo" height={32} src="/images/pitta.webp" width={86} />
           </Link>
         </NavbarItem>
       </NavbarContent>

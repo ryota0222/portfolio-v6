@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, RefObject } from "react";
+import { useState, useRef, useEffect, RefObject } from 'react';
 
 export const useHover = <T extends HTMLElement>(): [RefObject<T>, boolean] => {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,13 +9,14 @@ export const useHover = <T extends HTMLElement>(): [RefObject<T>, boolean] => {
 
   useEffect(() => {
     const node = ref.current;
+
     if (node) {
-      node.addEventListener("mouseenter", handleMouseEnter);
-      node.addEventListener("mouseleave", handleMouseLeave);
+      node.addEventListener('mouseenter', handleMouseEnter);
+      node.addEventListener('mouseleave', handleMouseLeave);
 
       return () => {
-        node.removeEventListener("mouseenter", handleMouseEnter);
-        node.removeEventListener("mouseleave", handleMouseLeave);
+        node.removeEventListener('mouseenter', handleMouseEnter);
+        node.removeEventListener('mouseleave', handleMouseLeave);
       };
     }
   }, [ref.current]); // 再レンダリングごとにイベントリスナーを再登録しないように

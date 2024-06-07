@@ -1,1 +1,1 @@
-export * from "./components/LINESticker";
+export * from './components/LINESticker';

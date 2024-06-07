@@ -1,6 +1,7 @@
 import { memo } from 'react';
-import { IChangelogItem } from '../types';
 import dayjs from 'dayjs';
+
+import { IChangelogItem } from '../types';
 
 interface Props {
   data: IChangelogItem;

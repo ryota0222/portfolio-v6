@@ -1,1 +1,1 @@
-export * from "./components/PerformanceScreen";
+export * from './components/PerformanceScreen';
