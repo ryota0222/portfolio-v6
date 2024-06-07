@@ -24,6 +24,8 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
                 ? 'bg-pink-400'
                 : t === ApplicationType.pwa
                 ? 'bg-zinc-800'
+                : t === ApplicationType.figma
+                ? 'bg-purple-500'
                 : ''
             }`}
           >
