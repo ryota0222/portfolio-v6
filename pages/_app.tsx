@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 import "@/styles/globals.css";
 import "@splidejs/react-splide/css";
+import { useEffect } from "react";
 
 const lineSeedJP = localFont({
   src: [
@@ -35,6 +36,11 @@ const lineSeedJP = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  useEffect(() => {
+    document.documentElement.removeAttribute("data-theme");
+    document.documentElement.style.removeProperty("color-scheme");
+  }, []);
 
   return (
     <NextUIProvider navigate={router.push}>
