@@ -13,7 +13,7 @@ export const Head = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:locale" content="ja_JP" />
       <meta property="og:site_name" content={siteConfig.name} />
-      <meta property="og:image" content="https://portfolio.ryotanny.com/images/mv.png" />
+      <meta property="og:image" content="https://portfolio.site.ryotanny.com/images/mv.png" />
       <meta
         key="viewport"
         content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
