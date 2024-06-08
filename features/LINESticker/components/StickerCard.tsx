@@ -18,15 +18,45 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         } hover:border-zinc-300`}
       >
         {/* うさまゆさん */}
-        {type === StickerType.Usamayusan && <Image className="w-full" src="/images/sticker/usamayusan/main.webp" />}
+        {type === StickerType.Usamayusan && (
+          <Image
+            alt="うさまゆさんのスタンプ"
+            className="w-full"
+            loading="lazy"
+            src="/images/sticker/usamayusan/main.webp"
+          />
+        )}
         {/* 飛ばないペンギン */}
-        {type === StickerType.Penguin && <Image className="w-full" src="/images/sticker/penguin/main.webp" />}
+        {type === StickerType.Penguin && (
+          <Image
+            alt="飛ばないペンギンのスタンプ"
+            className="w-full"
+            loading="lazy"
+            src="/images/sticker/penguin/main.webp"
+          />
+        )}
         {/* ひよっこエンジニア */}
-        {type === StickerType.Hiyoko && <Image className="w-full" src="/images/sticker/hiyoko/main.webp" />}
+        {type === StickerType.Hiyoko && (
+          <Image
+            alt="ひよっこエンジニアのスタンプ"
+            className="w-full"
+            loading="lazy"
+            src="/images/sticker/hiyoko/main.webp"
+          />
+        )}
         {/* えもじん */}
-        {type === StickerType.Emojin && <Image className="w-full" src="/images/sticker/emojin/main.webp" />}
+        {type === StickerType.Emojin && (
+          <Image alt="えもじんのスタンプ" className="w-full" loading="lazy" src="/images/sticker/emojin/main.webp" />
+        )}
         {/* まんまる おとこのこ */}
-        {type === StickerType.Otoko && <Image className="w-full" src="/images/sticker/otoko/main.webp" />}
+        {type === StickerType.Otoko && (
+          <Image
+            alt="まんまる おとこのこのスタンプ"
+            className="w-full"
+            loading="lazy"
+            src="/images/sticker/otoko/main.webp"
+          />
+        )}
       </div>
       {!hiddenLabel && (
         <span className="text-sm">

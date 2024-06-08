@@ -16,15 +16,15 @@ export const SnapStickyItem = memo<Props>(({ type, href }) => {
     <div className="w-full snap-start">
       <div className="relative">
         {type === StickerType.Usamayusan ? (
-          <Image className="w-[80vw] min-w-[80vw]" src="/images/sticker/usamayusan/preview.webp" />
+          <Image className="w-[80vw] min-w-[80vw]" loading="lazy" src="/images/sticker/usamayusan/preview.webp" />
         ) : type === StickerType.Penguin ? (
-          <Image className="w-[80vw] min-w-[80vw]" src="/images/sticker/penguin/preview.webp" />
+          <Image className="w-[80vw] min-w-[80vw]" loading="lazy" src="/images/sticker/penguin/preview.webp" />
         ) : type === StickerType.Hiyoko ? (
-          <Image className="w-[80vw] min-w-[80vw]" src="/images/sticker/hiyoko/preview.webp" />
+          <Image className="w-[80vw] min-w-[80vw]" loading="lazy" src="/images/sticker/hiyoko/preview.webp" />
         ) : type === StickerType.Emojin ? (
-          <Image className="w-[80vw] min-w-[80vw]" src="/images/sticker/emojin/preview.webp" />
+          <Image className="w-[80vw] min-w-[80vw]" loading="lazy" src="/images/sticker/emojin/preview.webp" />
         ) : type === StickerType.Otoko ? (
-          <Image className="w-[80vw] min-w-[80vw]" src="/images/sticker/otoko/preview.webp" />
+          <Image className="w-[80vw] min-w-[80vw]" loading="lazy" src="/images/sticker/otoko/preview.webp" />
         ) : null}
         <div className="absolute bottom-2 left-4 z-10">
           <StickerCard hiddenLabel withBorder type={type} />

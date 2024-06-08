@@ -37,7 +37,7 @@ export const EngineerSection = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="red">Article</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton href="/assets" type="bordered">
+            <LinkButton ariaLabel="Read more about articles" href="/assets" type="bordered">
               Read more
             </LinkButton>
           </div>
@@ -45,7 +45,7 @@ export const EngineerSection = memo(() => {
         <div className="mt-10">
           <ArticleList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton href="/assets" type="bordered">
+            <LinkButton ariaLabel="Read more about articles" href="/assets" type="bordered">
               Read more
             </LinkButton>
           </div>
@@ -58,7 +58,7 @@ export const EngineerSection = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="green">Presentation material</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton href="/assets/presentation" type="bordered">
+            <LinkButton ariaLabel="Read more about presentation materials" href="/assets/presentation" type="bordered">
               Read more
             </LinkButton>
           </div>
@@ -66,7 +66,7 @@ export const EngineerSection = memo(() => {
         <div className="mt-10">
           <PresentationMaterialList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton href="/assets/presentation" type="bordered">
+            <LinkButton ariaLabel="Read more about presentation materials" href="/assets/presentation" type="bordered">
               Read more
             </LinkButton>
           </div>

@@ -22,14 +22,14 @@ export const TShirtList = memo(() => {
             pauseOnHover: true,
             pauseOnFocus: false,
             rewind: false,
-            speed: 0.5,
+            speed: 0.8,
           },
         }}
       >
         {ShirtData.map((sticker) => (
           <SplideSlide key={sticker.id}>
             <Link href={sticker.url}>
-              <div className="w-[80vw] sm:w-64 hover:-translate-y-2 transition-all">
+              <div className="w-[80vw] sm:w-64 hover:-translate-y-2 transition-all pt-2">
                 <img alt="Tシャツの画像" src={sticker.image} />
               </div>
             </Link>

@@ -8,11 +8,13 @@ interface Props {
   href: string;
   type: 'bordered' | 'solid';
   isExternal?: boolean;
+  ariaLabel?: string;
 }
 
-export const LinkButton = memo<PropsWithChildren<Props>>(({ href, type, isExternal, children }) => {
+export const LinkButton = memo<PropsWithChildren<Props>>(({ href, type, isExternal, ariaLabel, children }) => {
   return (
     <Button
+      aria-label={ariaLabel}
       as={Link}
       className={`text-sm border py-4 px-6 h-auto ${type === 'solid' && 'bg-zinc-800 text-white border-zinc-300'}`}
       endContent={<RightUpArrowIcon size={20} />}

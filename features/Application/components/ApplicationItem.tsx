@@ -9,7 +9,13 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
   return (
     <Link className="card" href={link} rel="noopener noreferrer" target="_blank">
       <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-fit">
-        <Image isZoomed alt="サムネイル画像" className="w-full lg:w-[450px] md:w-[360px]" src={thumbnailUrl} />
+        <Image
+          isZoomed
+          alt="サムネイル画像"
+          className="w-full lg:w-[450px] md:w-[360px]"
+          loading="lazy"
+          src={thumbnailUrl}
+        />
       </div>
       <div className="mt-2 flex gap-2 items-center w-full lg:w-[450px] md:w-[360px]">
         <span className="sm:text-md text-sm">{name}</span>
@@ -40,6 +46,7 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
             key={skill.name}
             alt={`${skill.name}のアイコン`}
             height={20}
+            loading="lazy"
             radius="none"
             src={skill.image}
             title={skill.name}

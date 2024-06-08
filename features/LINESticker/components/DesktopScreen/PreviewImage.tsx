@@ -7,5 +7,14 @@ interface Props {
 }
 
 export const PreviewImage = memo<Props>(({ src, selected }) => {
-  return <Image className={selected ? 'block' : 'hidden'} src={src} width={300} />;
+  return (
+    <Image
+      alt="スタンプのプレビュー"
+      className={selected ? 'block' : 'hidden'}
+      height={566}
+      loading="lazy"
+      src={src}
+      width={300}
+    />
+  );
 });
