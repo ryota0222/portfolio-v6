@@ -4,4 +4,4 @@ node_modules
 *.mjs
 dist
 tsconfig.json
-src/data/**/*.json
+data/**/*.json
