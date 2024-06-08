@@ -16,7 +16,7 @@ export const Head = () => {
       <meta content="https://portfolio.site.ryotanny.com/images/mv.png" property="og:image" />
       <meta
         key="viewport"
-        content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
         name="viewport"
       />
       <link href="/favicon.ico" rel="icon" />
