@@ -5,6 +5,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useRouter } from 'next/router';
 import '@/styles/globals.css';
+import { useEffect } from 'react';
 
 const lineSeedJP = localFont({
   src: [
@@ -33,6 +34,12 @@ const lineSeedJP = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  useEffect(() => {
+    // Remove theme attributes
+    document.documentElement.removeAttribute('data-theme');
+    document.documentElement.style.removeProperty('color-scheme');
+  }, []);
 
   return (
     <NextUIProvider createCalendar={() => null} locale="ja-JP" navigate={router.push}>

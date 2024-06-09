@@ -1,8 +1,13 @@
 export type SiteConfig = typeof siteConfig;
 
+interface ILink {
+  label: string;
+  href: string;
+}
+
 export const siteConfig = {
   name: 'RyoTa. Portfolio',
-  description: 'Make beautiful websites regardless of your design experience.',
+  description: 'RyoTa Portfolio. I am a design engineer. I am interested in development, design, and illustrator.',
   navItems: [
     // {
     //   label: "Home",
@@ -24,14 +29,8 @@ export const siteConfig = {
     //   label: "About",
     //   href: "/about",
     // },
-  ] as {
-    label: string,
-    href: string,
-  }[],
-  navMenuItems: [] as {
-    label: string,
-    href: string,
-  }[],
+  ] as ILink[],
+  navMenuItems: [] as ILink[],
   links: {
     github: 'https://github.com/ryota0222',
     twitter: 'https://x.com/ryota_des_eng',
