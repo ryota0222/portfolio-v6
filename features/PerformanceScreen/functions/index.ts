@@ -44,7 +44,6 @@ export const getFileData = async (): Promise<ReportData | null> => {
   try {
     data = await import(`../../../data/psi/${dayjs().format('YYYY-MM-DD')}.json`);
   } catch (err) {
-    console.log(err);
     data = await import(`../../../data/psi/${dayjs().add(-1, 'day').format('YYYY-MM-DD')}.json`);
   }
 
