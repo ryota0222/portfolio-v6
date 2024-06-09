@@ -15,6 +15,7 @@
     "fetch-assets": "yarn node --loader ts-node/esm ./scripts/fetchAssets.mjs"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.3",
     "@nextui-org/button": "^2.0.31",
     "@nextui-org/react": "^2.3.6",
     "@nextui-org/system": "^2.1.2",
