@@ -46,7 +46,7 @@ export const PsiDescriptionItem = memo<Props>(({ data }) => {
         {isVisible && (
           <>
             <Doughnut data={functions.getChartData(data.score ?? 0)} />
-            <span className="text-white text-lg absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-25%]">
+            <span className="text-white text-lg absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
               {(data.score || 0) * 100}
             </span>
           </>
