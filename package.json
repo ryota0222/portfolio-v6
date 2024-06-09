@@ -12,7 +12,9 @@
     "format:prettier": "prettier --check --write .",
     "lint:es": "eslint .",
     "format:es": "eslint './**/*.{js,jsx,ts,tsx}' --fix",
-    "fetch-assets": "yarn node --loader ts-node/esm ./scripts/fetchAssets.mjs"
+    "fetch-assets": "yarn node --loader ts-node/esm ./scripts/fetchAssets.mjs",
+    "analyze": "ANALYZE=true next build",
+    "minifyJson": "node scripts/minifyJson.js"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.2.3",

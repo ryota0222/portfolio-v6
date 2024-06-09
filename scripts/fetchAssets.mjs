@@ -63,7 +63,7 @@ try {
         _items.push({
           url: i.link,
           title: i.title,
-          description: i.content,
+          description: '',
           date: i.isoDate,
           siteName: info.label,
           favicon: info.favicon,
@@ -73,7 +73,7 @@ try {
         _items.push({
           url: i.link,
           title: i.title,
-          description: i.content,
+          description: '',
           date: i.isoDate,
           siteName: info.label,
           favicon: info.favicon,
