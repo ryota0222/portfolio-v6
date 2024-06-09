@@ -10,12 +10,11 @@ export const AboutPortfolioSection = memo(() => {
   return (
     <>
       <Image
-        alt="dark gradient"
+        alt="background image"
         as={NextImage}
         className="w-full"
         loading="lazy"
         radius="none"
-        role="presentation"
         src="/images/dark-gradient.png"
       />
       <div className="py-24 bg-zinc-800">

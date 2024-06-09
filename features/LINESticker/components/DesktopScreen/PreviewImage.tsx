@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/react';
 import { memo } from 'react';
+import NextImage from 'next/image';
 
 interface Props {
   src: string;
@@ -9,7 +10,8 @@ interface Props {
 export const PreviewImage = memo<Props>(({ src, selected }) => {
   return (
     <Image
-      alt="スタンプのプレビュー"
+      alt="preview of sticker"
+      as={NextImage}
       className={selected ? 'block' : 'hidden'}
       height={566}
       loading="lazy"
