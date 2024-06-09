@@ -1,5 +1,5 @@
 import { Chart as ChartJS, ArcElement, Legend } from 'chart.js';
-import { Image } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
 import { Fragment, memo, useEffect, useMemo, useState } from 'react';
 import NextImage from 'next/image';
 

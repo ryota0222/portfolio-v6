@@ -1,4 +1,5 @@
-import { Link, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarMenuItem } from '@nextui-org/react';
+import { NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarMenuItem } from '@nextui-org/navbar';
+import { Link } from '@nextui-org/link';
 import { memo } from 'react';
 
 import { siteConfig } from '@/config/site';

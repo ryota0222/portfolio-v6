@@ -1,4 +1,4 @@
-import { Image } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
 import { PropsWithChildren, memo } from 'react';
 
 interface Props {

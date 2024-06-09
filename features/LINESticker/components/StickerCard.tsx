@@ -1,4 +1,4 @@
-import { Image } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
 import { memo } from 'react';
 
 import { StickerType } from '../types';
@@ -23,6 +23,8 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
             alt="うさまゆさんのスタンプ"
             className="w-full"
             loading="lazy"
+            width={158}
+            height={136}
             src="/images/sticker/usamayusan/main.webp"
           />
         )}
@@ -32,6 +34,8 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
             alt="飛ばないペンギンのスタンプ"
             className="w-full"
             loading="lazy"
+            width={158}
+            height={136}
             src="/images/sticker/penguin/main.webp"
           />
         )}
@@ -41,12 +45,21 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
             alt="ひよっこエンジニアのスタンプ"
             className="w-full"
             loading="lazy"
+            width={158}
+            height={136}
             src="/images/sticker/hiyoko/main.webp"
           />
         )}
         {/* えもじん */}
         {type === StickerType.Emojin && (
-          <Image alt="えもじんのスタンプ" className="w-full" loading="lazy" src="/images/sticker/emojin/main.webp" />
+          <Image
+            alt="えもじんのスタンプ"
+            className="w-full"
+            loading="lazy"
+            width={158}
+            height={136}
+            src="/images/sticker/emojin/main.webp"
+          />
         )}
         {/* まんまる おとこのこ */}
         {type === StickerType.Otoko && (
@@ -54,6 +67,8 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
             alt="まんまる おとこのこのスタンプ"
             className="w-full"
             loading="lazy"
+            width={158}
+            height={136}
             src="/images/sticker/otoko/main.webp"
           />
         )}

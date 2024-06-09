@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import Link from 'next/link';
-import { Image } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
 import NextImage from 'next/image';
 
 import { IApplicationItem } from '../types';

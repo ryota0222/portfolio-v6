@@ -1,7 +1,8 @@
 import { memo, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import { Image, Link } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
+import { Link } from '@nextui-org/link';
 import NextImage from 'next/image';
 
 import '@splidejs/react-splide/css';

@@ -1,5 +1,5 @@
 import { memo, useEffect } from 'react';
-import { Link } from '@nextui-org/react';
+import { Link } from '@nextui-org/link';
 
 import { StickerType } from '../../types';
 import { StickerCard } from '../StickerCard';

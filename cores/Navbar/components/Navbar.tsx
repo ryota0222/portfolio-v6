@@ -1,4 +1,6 @@
-import { Link, Navbar as NextUINavbar, NavbarContent, NavbarBrand, NavbarItem, Image } from '@nextui-org/react';
+import { Navbar as NextUINavbar, NavbarContent, NavbarBrand, NavbarItem } from '@nextui-org/navbar';
+import { Image } from '@nextui-org/image';
+import { Link } from '@nextui-org/link';
 import NextLink from 'next/link';
 import { memo } from 'react';
 

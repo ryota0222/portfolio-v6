@@ -1,4 +1,5 @@
-import { BreadcrumbItem, Breadcrumbs, Tab, Tabs } from '@nextui-org/react';
+import { Tab, Tabs } from '@nextui-org/tabs';
+import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/breadcrumbs';
 import { usePathname } from 'next/navigation';
 import { memo } from 'react';
 

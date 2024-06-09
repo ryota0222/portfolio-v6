@@ -1,4 +1,5 @@
-import { Image, Link } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
+import { Link } from '@nextui-org/link';
 import NextImage from 'next/image';
 import { memo } from 'react';
 
