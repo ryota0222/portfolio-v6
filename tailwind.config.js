@@ -7,7 +7,7 @@ module.exports = {
     './features/**/*.{js,ts,jsx,tsx,mdx}',
     './layouts/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/components/(button|navbar|image|link|tabs|breadcrumbs).js',
   ],
   theme: {
     extend: {},
