@@ -37,16 +37,16 @@ export const EngineerSection = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="red">Article</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton ariaLabel="Read more about articles" href="/assets" type="bordered">
-              Read more
+            <LinkButton ariaLabel="Read more articles" href="/assets" type="bordered">
+              Read more<span className="hidden"> articles</span>
             </LinkButton>
           </div>
         </div>
         <div className="mt-10">
           <ArticleList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton ariaLabel="Read more about articles" href="/assets" type="bordered">
-              Read more
+            <LinkButton ariaLabel="Read more articles" href="/assets" type="bordered">
+              Read more<span className="hidden"> articles</span>
             </LinkButton>
           </div>
         </div>
@@ -58,16 +58,16 @@ export const EngineerSection = memo(() => {
         <div className="flex justify-between items-center">
           <SectionSubTitle color="green">Presentation material</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton ariaLabel="Read more about presentation materials" href="/assets/presentation" type="bordered">
-              Read more
+            <LinkButton ariaLabel="Read more presentation materials" href="/assets/presentation" type="bordered">
+              Read more<span className="hidden"> presentation materials</span>
             </LinkButton>
           </div>
         </div>
         <div className="mt-10">
           <PresentationMaterialList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton ariaLabel="Read more about presentation materials" href="/assets/presentation" type="bordered">
-              Read more
+            <LinkButton ariaLabel="Read more presentation materials" href="/assets/presentation" type="bordered">
+              Read more<span className="hidden"> presentation materials</span>
             </LinkButton>
           </div>
         </div>

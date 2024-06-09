@@ -4,7 +4,6 @@ import localFont from 'next/font/local';
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useRouter } from 'next/router';
-
 import '@/styles/globals.css';
 import '@splidejs/react-splide/css';
 import { useEffect } from 'react';

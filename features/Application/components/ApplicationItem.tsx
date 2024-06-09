@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import Link from 'next/link';
 import { Image } from '@nextui-org/react';
+import NextImage from 'next/image';
 
 import { IApplicationItem } from '../types';
 import { ApplicationType } from '../constants';
@@ -11,7 +12,8 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
       <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-fit">
         <Image
           isZoomed
-          alt="サムネイル画像"
+          alt="thumbnail image"
+          as={NextImage}
           className="w-full lg:w-[450px] md:w-[360px]"
           loading="lazy"
           src={thumbnailUrl}
@@ -24,15 +26,15 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
             key={t}
             className={`text-xs text-white px-2 py-1 rounded-full ${
               t === ApplicationType.Line
-                ? 'bg-green-500'
+                ? 'bg-green-700'
                 : t === ApplicationType.Web
-                  ? 'bg-blue-400'
+                  ? 'bg-blue-600'
                   : t === ApplicationType.Mobile
-                    ? 'bg-pink-400'
+                    ? 'bg-pink-600'
                     : t === ApplicationType.Pwa
                       ? 'bg-zinc-800'
                       : t === ApplicationType.Figma
-                        ? 'bg-purple-500'
+                        ? 'bg-purple-700'
                         : ''
             }`}
           >

@@ -1,6 +1,7 @@
 import { Chart as ChartJS, ArcElement, Legend } from 'chart.js';
 import { Image } from '@nextui-org/react';
 import { Fragment, memo, useEffect, useMemo, useState } from 'react';
+import NextImage from 'next/image';
 
 import * as functions from '../functions';
 import { PsiData, ReportData } from '../types';
@@ -55,7 +56,7 @@ export const PerformanceScreen = memo(() => {
 
   return (
     <div className="w-full flex flex-col items-center max-w-2xl mx-auto">
-      <Image alt="icon" height={96} loading="lazy" src="/images/peformance-icon.png" width={96} />
+      <Image alt="icon" as={NextImage} height={96} loading="lazy" src="/images/peformance-icon.png" width={96} />
       <h2 className="text-4xl text-white mt-2 mb-8">Performance</h2>
       <p className="text-zinc-300">Using PageSpeed Insights, we measured the performance.</p>
       <div className="my-12 flex flex-col gap-16">

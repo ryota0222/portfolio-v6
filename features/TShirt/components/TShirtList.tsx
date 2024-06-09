@@ -1,11 +1,22 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import { Link } from '@nextui-org/react';
+import { Image, Link } from '@nextui-org/react';
+import NextImage from 'next/image';
 
 import { ShirtData } from '../constants';
 
 export const TShirtList = memo(() => {
+  useEffect(() => {
+    // DOMが読み込まれた後にカスタムロールを設定
+    const slides = document.querySelectorAll('.splide__slide');
+
+    slides.forEach((slide) => {
+      slide.setAttribute('role', 'region');
+      slide.removeAttribute('aria-roledescription'); // もし不要であれば
+    });
+  }, []);
+
   return (
     <div className="w-screen">
       <Splide
@@ -30,7 +41,7 @@ export const TShirtList = memo(() => {
           <SplideSlide key={sticker.id}>
             <Link href={sticker.url}>
               <div className="w-[80vw] sm:w-64 hover:-translate-y-2 transition-all pt-2">
-                <img alt="Tシャツの画像" src={sticker.image} />
+                <Image alt="T-shirt image" as={NextImage} src={sticker.image} />
               </div>
             </Link>
           </SplideSlide>

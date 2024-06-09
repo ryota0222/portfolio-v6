@@ -59,7 +59,7 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         )}
       </div>
       {!hiddenLabel && (
-        <span className="text-sm">
+        <span className="text-sm text-black">
           {type === StickerType.Usamayusan
             ? 'うさまゆさん'
             : type === StickerType.Penguin

@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import Link from 'next/link';
 import { Image } from '@nextui-org/react';
+import NextImage from 'next/image';
 
 import { IPresentationMaterialItem } from '../types';
 
@@ -11,7 +12,8 @@ export const PresentationMaterialItem = memo<IPresentationMaterialItem>(
         <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-fit">
           <Image
             isZoomed
-            alt="サムネイル画像"
+            alt="thumbnail image"
+            as={NextImage}
             className="w-full lg:w-[450px] md:w-[360px]"
             loading="lazy"
             src={thumbnail}

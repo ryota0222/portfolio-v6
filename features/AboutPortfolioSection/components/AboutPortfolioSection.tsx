@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/react';
 import { memo } from 'react';
+import NextImage from 'next/image';
 
 import { ChangelogSection } from '@/features/ChangelogSection';
 import { PerformanceScreen } from '@/features/PerformanceScreen';
@@ -10,6 +11,7 @@ export const AboutPortfolioSection = memo(() => {
     <>
       <Image
         alt="dark gradient"
+        as={NextImage}
         className="w-full"
         loading="lazy"
         radius="none"
