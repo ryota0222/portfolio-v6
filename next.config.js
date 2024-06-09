@@ -7,7 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['portfolio.site.ryotanny.com', 'res.cloudinary.com', 'assets.st-note.com'],
+    domains: ['portfolio.site.ryotanny.com', 'res.cloudinary.com', 'assets.st-note.com', 'cdn.jsdelivr.net'],
   },
 };
 

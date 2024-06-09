@@ -1,4 +1,4 @@
-import { Chart as ChartJS, ArcElement, Legend } from 'chart.js';
+import { Chart as ChartJS, ArcElement } from 'chart.js';
 import { Image } from '@nextui-org/image';
 import { Fragment, memo, useEffect, useMemo, useState } from 'react';
 import NextImage from 'next/image';
@@ -8,7 +8,7 @@ import { PsiData, ReportData } from '../types';
 
 import { PsiDescriptionItem } from './PsiDescriptionItem';
 
-ChartJS.register(ArcElement, Legend);
+ChartJS.register(ArcElement);
 
 export const PerformanceScreen = memo(() => {
   const [fileData, setFileData] = useState<ReportData | null>(null);
