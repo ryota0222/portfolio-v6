@@ -6,29 +6,23 @@ import { AssetTitle } from './AssetTitle';
 import RssData from '@/data/rss.json';
 import { ArticleItem } from '@/features/Article';
 import { SlideData } from '@/features/PresentationMaterial/constants';
-import { IPresentationMaterialItem } from '@/features/PresentationMaterial/types';
 
 export const AssetList = memo(() => {
   const pathname = usePathname();
   const latestData = useMemo(() => {
-    // RssDataをコピー
-    const totalData = JSON.parse(JSON.stringify(RssData)) as Record<string, IPresentationMaterialItem[]>;
-
-    totalData['presentation'] = JSON.parse(JSON.stringify(SlideData));
-    totalData['all'] = [...totalData['all'], ...SlideData];
-    let list = totalData['all'];
+    let list = [...RssData, ...SlideData];
 
     if (pathname === '/assets/zenn') {
-      list = totalData['zenn'];
+      list = RssData.filter((item) => item.siteName === 'Zenn');
     }
     if (pathname === '/assets/qiita') {
-      list = totalData['qiita'];
+      list = RssData.filter((item) => item.siteName === 'Qiita');
     }
     if (pathname === '/assets/note') {
-      list = totalData['note'];
+      list = RssData.filter((item) => item.siteName === 'Note');
     }
     if (pathname === '/assets/presentation') {
-      list = totalData['presentation'];
+      list = SlideData;
     }
     list.sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -36,8 +30,6 @@ export const AssetList = memo(() => {
 
     return list;
   }, []);
-
-  console.log(pathname);
 
   return (
     <>

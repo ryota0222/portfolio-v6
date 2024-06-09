@@ -51,7 +51,7 @@ async function fetchOGPImage(url) {
 
 try {
   console.log("🌟 Fetch RSS");
-  const jsonFeed = {};
+  let jsonList = [];
   for (const [site, info] of Object.entries(rssFeed)) {
     // RSSのデータ取得
     const feed = await parser.parseURL(info.url);
@@ -81,18 +81,16 @@ try {
         });
       }
     }
-    // jsonFeedに格納
-    jsonFeed[site] = jsonFeed[site]?.length
-      ? [...jsonFeed[site], ..._items]
-      : _items;
-    jsonFeed["all"] = jsonFeed["all"]?.length
-      ? [...jsonFeed["all"], ..._items]
-      : _items;
+    // jsonListに格納
+    jsonList = jsonList?.length ? [...jsonList, ..._items] : _items;
+    // 日付順にソート
+    jsonList.sort((a, b) => new Date(b.date) - new Date(a.date));
     console.log(`✅ Fetched ${info.label}`);
   }
 
-  // static/rss.jsonに出力
-  writeFileSync("./data/rss.json", JSON.stringify(jsonFeed));
+  // rssを出力
+  writeFileSync("./data/rss.json", JSON.stringify(jsonList));
+  writeFileSync("./data/latestRss.json", JSON.stringify(jsonList.slice(0, 4)));
 } catch (err) {
   console.error(err);
 }
