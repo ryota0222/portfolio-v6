@@ -2,7 +2,6 @@ import { nextui } from '@nextui-org/react';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './features/**/*.{js,ts,jsx,tsx}', './cores/**/*.{js,ts,jsx,tsx}'],
   content: [
     './cores/**/*.{js,ts,jsx,tsx,mdx}',
     './features/**/*.{js,ts,jsx,tsx,mdx}',
