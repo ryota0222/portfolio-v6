@@ -9,14 +9,7 @@ import { SharePortfolioSection } from '@/features/SharePortfolioSection';
 export const AboutPortfolioSection = memo(() => {
   return (
     <>
-      <Image
-        alt="background image"
-        as={NextImage}
-        className="w-full"
-        loading="lazy"
-        radius="none"
-        src="/images/dark-gradient.png"
-      />
+      <Image alt="background image" as={NextImage} className="w-full" radius="none" src="/images/dark-gradient.png" />
       <div className="py-24 bg-zinc-800">
         <section className="container mx-auto max-w-5xl px-6 flex-grow">
           <PerformanceScreen />
