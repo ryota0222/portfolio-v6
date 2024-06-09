@@ -12,8 +12,10 @@ export const ArticleItem = memo<IArticleItem>(({ title, url, thumbnail, favicon,
           isZoomed
           alt="thumbnail image"
           className="w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]"
+          height={241}
           loading="lazy"
           src={thumbnail}
+          width={460}
         />
       </div>
       <div className="mt-2 w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]">{title}</div>
