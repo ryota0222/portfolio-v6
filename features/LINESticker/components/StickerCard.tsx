@@ -22,10 +22,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           <Image
             alt="うさまゆさんのスタンプ"
             className="w-full"
-            loading="lazy"
-            width={158}
             height={136}
+            loading="lazy"
             src="/images/sticker/usamayusan/main.webp"
+            width={158}
           />
         )}
         {/* 飛ばないペンギン */}
@@ -33,10 +33,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           <Image
             alt="飛ばないペンギンのスタンプ"
             className="w-full"
-            loading="lazy"
-            width={158}
             height={136}
+            loading="lazy"
             src="/images/sticker/penguin/main.webp"
+            width={158}
           />
         )}
         {/* ひよっこエンジニア */}
@@ -44,10 +44,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           <Image
             alt="ひよっこエンジニアのスタンプ"
             className="w-full"
-            loading="lazy"
-            width={158}
             height={136}
+            loading="lazy"
             src="/images/sticker/hiyoko/main.webp"
+            width={158}
           />
         )}
         {/* えもじん */}
@@ -55,10 +55,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           <Image
             alt="えもじんのスタンプ"
             className="w-full"
-            loading="lazy"
-            width={158}
             height={136}
+            loading="lazy"
             src="/images/sticker/emojin/main.webp"
+            width={158}
           />
         )}
         {/* まんまる おとこのこ */}
@@ -66,10 +66,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           <Image
             alt="まんまる おとこのこのスタンプ"
             className="w-full"
-            loading="lazy"
-            width={158}
             height={136}
+            loading="lazy"
             src="/images/sticker/otoko/main.webp"
+            width={158}
           />
         )}
       </div>
