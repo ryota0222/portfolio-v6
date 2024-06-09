@@ -11,6 +11,8 @@ export const FirstView = memo(() => {
         alt="profile image"
         as={NextImage}
         className="sm:w-[240px] sm:h-[240px] w-[160px] h-[160px]"
+        width={240}
+        height={240}
         loading="lazy"
         radius="full"
         src="/images/profile.webp"

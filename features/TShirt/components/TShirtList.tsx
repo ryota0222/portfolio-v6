@@ -41,7 +41,7 @@ export const TShirtList = memo(() => {
           <SplideSlide key={sticker.id}>
             <Link href={sticker.url}>
               <div className="w-[80vw] sm:w-64 hover:-translate-y-2 transition-all pt-2">
-                <Image alt="T-shirt image" as={NextImage} src={sticker.image} />
+                <Image alt="T-shirt image" as={NextImage} src={sticker.image} width={256} height={256} />
               </div>
             </Link>
           </SplideSlide>
