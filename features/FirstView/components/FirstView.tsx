@@ -1,19 +1,27 @@
 import { Image } from '@nextui-org/image';
 import { Link } from '@nextui-org/link';
 import { memo } from 'react';
-import dynamic from 'next/dynamic';
+import NextImage from 'next/image';
+// import dynamic from 'next/dynamic';
 
 import { siteConfig } from '@/config/site';
 
-const ProfileImage = dynamic(() => import('./ProfileImage').then((mod) => mod.ProfileImage), {
-  ssr: false,
-  loading: () => <></>,
-});
+// const ProfileImage = dynamic(() => import('./ProfileImage').then((mod) => mod.ProfileImage), {
+//   ssr: false,
+//   loading: () => <></>,
+// });
 
 export const FirstView = memo(() => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      <ProfileImage />
+      <NextImage
+        priority
+        alt="profile image"
+        className="sm:w-[240px] sm:h-[240px] w-[160px] h-[160px] rounded-full"
+        height={240}
+        src="/images/profile.webp"
+        width={240}
+      />
       <h1 className="font-semibold text-[32px] sm:text-[40px] mt-8 mb-4">RyoTa.</h1>
       <p className="text-zinc-600 text-sm sm:text-md">Design Engineer from 2020.</p>
       <div className="flex gap-6 sm:gap-10 mt-10 sm:mt-8">
