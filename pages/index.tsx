@@ -1,8 +1,18 @@
+import dynamic from 'next/dynamic';
+
 import { EngineerSection } from '@/features/EngineerSection';
 import { FirstView } from '@/features/FirstView';
 import { HobbySection } from '@/features/HobbySection';
 import DefaultLayout from '@/layouts/default';
-import { AboutPortfolioSection } from '@/features/AboutPortfolioSection';
+
+// Dynamic import
+const AboutPortfolioSection = dynamic(
+  () => import('@/features/AboutPortfolioSection').then((mod) => mod.AboutPortfolioSection),
+  {
+    ssr: false,
+    loading: () => <></>,
+  },
+);
 
 export default function IndexPage() {
   return (
