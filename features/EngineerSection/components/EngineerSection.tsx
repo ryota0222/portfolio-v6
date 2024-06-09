@@ -38,7 +38,7 @@ export const EngineerSection = memo(() => {
           <SectionSubTitle color="red">Article</SectionSubTitle>
           <div className="hidden sm:block">
             <LinkButton ariaLabel="Read more articles" href="/assets" type="bordered">
-              Read more<span className="hidden"> articles</span>
+              Read more articles
             </LinkButton>
           </div>
         </div>
@@ -46,7 +46,7 @@ export const EngineerSection = memo(() => {
           <ArticleList />
           <div className="sm:hidden mt-6 flex justify-center">
             <LinkButton ariaLabel="Read more articles" href="/assets" type="bordered">
-              Read more<span className="hidden"> articles</span>
+              Read more articles
             </LinkButton>
           </div>
         </div>
@@ -56,18 +56,18 @@ export const EngineerSection = memo(() => {
        */}
       <section className="w-full h-full sm:mt-40 mt-24">
         <div className="flex justify-between items-center">
-          <SectionSubTitle color="green">Presentation material</SectionSubTitle>
+          <SectionSubTitle color="green">Presentation note</SectionSubTitle>
           <div className="hidden sm:block">
-            <LinkButton ariaLabel="Read more presentation materials" href="/assets/presentation" type="bordered">
-              Read more<span className="hidden"> presentation materials</span>
+            <LinkButton ariaLabel="Read more presentation note" href="/assets/presentation" type="bordered">
+              Read all presentation nates
             </LinkButton>
           </div>
         </div>
         <div className="mt-10">
           <PresentationMaterialList />
           <div className="sm:hidden mt-6 flex justify-center">
-            <LinkButton ariaLabel="Read more presentation materials" href="/assets/presentation" type="bordered">
-              Read more<span className="hidden"> presentation materials</span>
+            <LinkButton ariaLabel="Read more presentation note" href="/assets/presentation" type="bordered">
+              Read all presentation notes
             </LinkButton>
           </div>
         </div>
