@@ -13,10 +13,10 @@ export const AboutPortfolioSection = memo(() => {
         alt="background image"
         as={NextImage}
         className="w-full"
-        radius="none"
-        width={2880}
         height={874}
+        radius="none"
         src="/images/dark-gradient.png"
+        width={2880}
       />
       <div className="py-24 bg-zinc-800">
         <section className="container mx-auto max-w-5xl px-6 flex-grow">

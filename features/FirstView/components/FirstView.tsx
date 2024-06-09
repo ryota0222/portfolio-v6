@@ -11,11 +11,11 @@ export const FirstView = memo(() => {
         alt="profile image"
         as={NextImage}
         className="sm:w-[240px] sm:h-[240px] w-[160px] h-[160px]"
-        width={240}
         height={240}
         loading="lazy"
         radius="full"
         src="/images/profile.webp"
+        width={240}
       />
       <h1 className="font-semibold text-[32px] sm:text-[40px] mt-8 mb-4">RyoTa.</h1>
       <p className="text-zinc-600 text-sm sm:text-md">Design Engineer from 2020.</p>

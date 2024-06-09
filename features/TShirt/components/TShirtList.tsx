@@ -4,6 +4,8 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import { Image, Link } from '@nextui-org/react';
 import NextImage from 'next/image';
 
+import '@splidejs/react-splide/css';
+
 import { ShirtData } from '../constants';
 
 export const TShirtList = memo(() => {
@@ -41,7 +43,7 @@ export const TShirtList = memo(() => {
           <SplideSlide key={sticker.id}>
             <Link href={sticker.url}>
               <div className="w-[80vw] sm:w-64 hover:-translate-y-2 transition-all pt-2">
-                <Image alt="T-shirt image" as={NextImage} src={sticker.image} width={256} height={256} />
+                <Image alt="T-shirt image" as={NextImage} height={256} src={sticker.image} width={256} />
               </div>
             </Link>
           </SplideSlide>

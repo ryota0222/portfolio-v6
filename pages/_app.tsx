@@ -5,8 +5,9 @@ import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useRouter } from 'next/router';
 import '@/styles/globals.css';
-import '@splidejs/react-splide/css';
 import { useEffect } from 'react';
+
+import createCalendar from '@/libs/createCalendar';
 
 const lineSeedJP = localFont({
   src: [
@@ -42,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <NextUIProvider navigate={router.push}>
+    <NextUIProvider createCalendar={createCalendar} locale="ja-JP" navigate={router.push}>
       <NextThemesProvider>
         <div className={lineSeedJP.className}>
           <Component {...pageProps} />

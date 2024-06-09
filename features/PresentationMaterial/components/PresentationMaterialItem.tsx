@@ -15,9 +15,9 @@ export const PresentationMaterialItem = memo<IPresentationMaterialItem>(
             alt="thumbnail image"
             as={NextImage}
             className="w-full lg:w-[450px] md:w-[360px]"
+            height={270}
             src={thumbnail}
             width={480}
-            height={270}
           />
         </div>
         <div className="mt-2 flex gap-2 items-center w-full lg:w-[450px] md:w-[360px]">{title}</div>

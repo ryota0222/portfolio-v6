@@ -15,9 +15,9 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
           alt="thumbnail image"
           as={NextImage}
           className="w-full lg:w-[450px] md:w-[360px]"
-          width={480}
           height={270}
           src={thumbnailUrl}
+          width={480}
         />
       </div>
       <div className="mt-2 flex gap-2 items-center w-full lg:w-[450px] md:w-[360px]">
