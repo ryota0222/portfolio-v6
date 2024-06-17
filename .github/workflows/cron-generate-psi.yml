@@ -36,6 +36,7 @@ jobs:
         working-directory: scripts
         run: |
           python pageSpeedInsight.py
+          rm./../data/psi/*.json
           mv *.json ./../data/psi/
       - name: commit files
         run: |
