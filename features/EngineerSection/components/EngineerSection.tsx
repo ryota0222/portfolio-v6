@@ -1,12 +1,29 @@
+import dynamic from 'next/dynamic';
 import { memo } from 'react';
 
 import { SectionSubTitle } from '@/cores/SectionSubTitle';
 import { SectionTitle } from '@/cores/SectionTitle';
-import { ApplicationList } from '@/features/Application';
-import { ArticleList } from '@/features/Article';
 import { CareerList } from '@/features/Career';
-import { PresentationMaterialList } from '@/features/PresentationMaterial';
 import { LinkButton } from '@/features/LinkButton';
+
+// Dynamic import
+const ApplicationList = dynamic(() => import('@/features/Application').then((mod) => mod.ApplicationList), {
+  ssr: false,
+  loading: () => <></>,
+});
+
+const ArticleList = dynamic(() => import('@/features/Article').then((mod) => mod.ArticleList), {
+  ssr: false,
+  loading: () => <></>,
+});
+
+const PresentationMaterialList = dynamic(
+  () => import('@/features/PresentationMaterial').then((mod) => mod.PresentationMaterialList),
+  {
+    ssr: false,
+    loading: () => <></>,
+  },
+);
 
 export const EngineerSection = memo(() => {
   return (

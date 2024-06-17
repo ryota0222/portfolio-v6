@@ -1,6 +1,5 @@
-import { Chart as ChartJS, ArcElement } from 'chart.js';
 import { Image } from '@nextui-org/image';
-import { Fragment, memo, useEffect, useMemo, useState } from 'react';
+import { Fragment, memo, useEffect, useMemo, useRef, useState } from 'react';
 import NextImage from 'next/image';
 
 import * as functions from '../functions';
@@ -8,10 +7,10 @@ import { PsiData, ReportData } from '../types';
 
 import { PsiDescriptionItem } from './PsiDescriptionItem';
 
-ChartJS.register(ArcElement);
-
 export const PerformanceScreen = memo(() => {
   const [fileData, setFileData] = useState<ReportData | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const f = async (): Promise<void> => {
@@ -19,6 +18,34 @@ export const PerformanceScreen = memo(() => {
     };
 
     void f();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            // chartjsを動的にimport
+            import('chart.js').then((chart) => {
+              chart.Chart.register(chart.ArcElement);
+            });
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
   }, []);
 
   const accessibilityData = useMemo(() => {
@@ -55,17 +82,19 @@ export const PerformanceScreen = memo(() => {
   }, [accessibilityData, performanceData, seoData]);
 
   return (
-    <div className="w-full flex flex-col items-center max-w-2xl mx-auto">
-      <Image alt="icon" as={NextImage} height={96} src="/images/peformance-icon.png" width={96} />
+    <div ref={containerRef} className="w-full flex flex-col items-center max-w-2xl mx-auto">
+      <Image alt="icon" as={NextImage} height={96} loading="lazy" src="/images/peformance-icon.png" width={96} />
       <h2 className="text-4xl text-white mt-2 mb-8">Performance</h2>
       <p className="text-zinc-300">Using PageSpeed Insights, we measured the performance.</p>
-      <div className="my-12 flex flex-col gap-16">
-        {psiDataList.map((data) => (
-          <Fragment key={data.title}>
-            <PsiDescriptionItem data={data} />
-          </Fragment>
-        ))}
-      </div>
+      {isVisible && (
+        <div className="my-12 flex flex-col gap-16">
+          {psiDataList.map((data) => (
+            <Fragment key={data.title}>
+              <PsiDescriptionItem data={data} />
+            </Fragment>
+          ))}
+        </div>
+      )}
     </div>
   );
 });
