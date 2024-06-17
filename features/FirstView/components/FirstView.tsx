@@ -11,6 +11,7 @@ export const FirstView = memo(() => {
         priority
         alt="profile image"
         className="sm:w-[240px] sm:h-[240px] w-[160px] h-[160px] rounded-full"
+        fetchPriority="high"
         height={240}
         src="/images/profile.webp"
         width={240}
@@ -19,19 +20,19 @@ export const FirstView = memo(() => {
       <p className="text-zinc-600 text-sm sm:text-md">Design Engineer from 2020.</p>
       <div className="flex gap-6 sm:gap-10 mt-10 sm:mt-8">
         <Link isExternal href={siteConfig.links.twitter}>
-          <NextImage priority alt="logo" height={36} src="/images/x.svg" width={36} />
+          <NextImage alt="logo" loading="lazy" height={36} src="/images/x.svg" width={36} />
         </Link>
         <Link isExternal href={siteConfig.links.github}>
-          <NextImage priority alt="logo" height={40} src="/images/github.svg" width={40} />
+          <NextImage alt="logo" loading="lazy" height={40} src="/images/github.svg" width={40} />
         </Link>
         <Link isExternal href={siteConfig.links.zenn}>
-          <NextImage priority alt="logo" height={40} src="/images/zenn.svg" width={40} />
+          <NextImage alt="logo" loading="lazy" height={40} src="/images/zenn.svg" width={40} />
         </Link>
         <Link isExternal href={siteConfig.links.qiita}>
-          <NextImage priority alt="logo" height={40} src="/images/qiita.png" width={40} />
+          <NextImage alt="logo" loading="lazy" height={40} src="/images/qiita.png" width={40} />
         </Link>
         <Link isExternal href={siteConfig.links.note}>
-          <NextImage priority alt="logo" height={36} src="/images/note.svg" width={36} />
+          <NextImage alt="logo" loading="lazy" height={36} src="/images/note.svg" width={36} />
         </Link>
       </div>
     </div>
