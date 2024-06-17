@@ -8,10 +8,10 @@ const ChangelogSection = dynamic(() => import('@/features/ChangelogSection').the
   ssr: false,
   loading: () => <></>,
 });
-const PerformanceScreen = dynamic(() => import('@/features/PerformanceScreen').then((mod) => mod.PerformanceScreen), {
-  ssr: false,
-  loading: () => <></>,
-});
+// const PerformanceScreen = dynamic(() => import('@/features/PerformanceScreen').then((mod) => mod.PerformanceScreen), {
+//   ssr: false,
+//   loading: () => <></>,
+// });
 const SharePortfolioSection = dynamic(
   () => import('@/features/SharePortfolioSection').then((mod) => mod.SharePortfolioSection),
   {
@@ -33,9 +33,7 @@ export const AboutPortfolioSection = memo(() => {
         width={2880}
       />
       <div className="py-24 bg-zinc-800">
-        <section className="container mx-auto max-w-5xl px-6 flex-grow">
-          <PerformanceScreen />
-        </section>
+        <section className="container mx-auto max-w-5xl px-6 flex-grow">{/* <PerformanceScreen /> */}</section>
         <section className="container mx-auto max-w-5xl px-6 flex-grow mt-40">
           <ChangelogSection />
         </section>
