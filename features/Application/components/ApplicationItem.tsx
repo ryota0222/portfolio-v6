@@ -16,6 +16,7 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
           as={NextImage}
           className="w-full lg:w-[450px] md:w-[360px]"
           height={270}
+          quality={40}
           src={thumbnailUrl}
           width={480}
         />

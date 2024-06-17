@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/image';
 import { memo } from 'react';
+import NextImage from 'next/image';
 
 import { StickerType } from '../types';
 
@@ -21,9 +22,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {type === StickerType.Usamayusan && (
           <Image
             alt="うさまゆさんのスタンプ"
+            as={NextImage}
             className="w-full"
             height={136}
-            loading="lazy"
+            quality={50}
             src="/images/sticker/usamayusan/main.webp"
             width={158}
           />
@@ -32,9 +34,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {type === StickerType.Penguin && (
           <Image
             alt="飛ばないペンギンのスタンプ"
+            as={NextImage}
             className="w-full"
             height={136}
-            loading="lazy"
+            quality={50}
             src="/images/sticker/penguin/main.webp"
             width={158}
           />
@@ -43,9 +46,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {type === StickerType.Hiyoko && (
           <Image
             alt="ひよっこエンジニアのスタンプ"
+            as={NextImage}
             className="w-full"
             height={136}
-            loading="lazy"
+            quality={50}
             src="/images/sticker/hiyoko/main.webp"
             width={158}
           />
@@ -54,9 +58,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {type === StickerType.Emojin && (
           <Image
             alt="えもじんのスタンプ"
+            as={NextImage}
             className="w-full"
             height={136}
-            loading="lazy"
+            quality={50}
             src="/images/sticker/emojin/main.webp"
             width={158}
           />
@@ -65,9 +70,10 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {type === StickerType.Otoko && (
           <Image
             alt="まんまる おとこのこのスタンプ"
+            as={NextImage}
             className="w-full"
             height={136}
-            loading="lazy"
+            quality={50}
             src="/images/sticker/otoko/main.webp"
             width={158}
           />

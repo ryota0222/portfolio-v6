@@ -1,4 +1,3 @@
-import { Image } from '@nextui-org/image';
 import { memo, useCallback } from 'react';
 import NextImage from 'next/image';
 
@@ -15,7 +14,7 @@ export const ChangelogSection = memo(() => {
 
   return (
     <div className="w-full flex flex-col items-center max-w-2xl mx-auto">
-      <Image alt="icon" as={NextImage} height={96} src="/images/changelog-icon.png" width={96} />
+      <NextImage alt="icon" height={96} src="/images/changelog-icon.png" width={96} />
       <h2 className="text-4xl text-white mt-2 mb-8">Changelog</h2>
       <div className="my-12 flex flex-col gap-16">
         {ChangelogData.map((data) => (

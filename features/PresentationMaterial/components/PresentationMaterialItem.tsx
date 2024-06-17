@@ -16,6 +16,7 @@ export const PresentationMaterialItem = memo<IPresentationMaterialItem>(
             as={NextImage}
             className="w-full lg:w-[450px] md:w-[360px]"
             height={270}
+            quality={40}
             src={thumbnail}
             width={480}
           />

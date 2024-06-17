@@ -15,6 +15,7 @@ export const PreviewImage = memo<Props>(({ src, selected }) => {
       className={selected ? 'block' : 'hidden'}
       height={566}
       loading="lazy"
+      quality={50}
       src={src}
       width={300}
     />

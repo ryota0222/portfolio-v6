@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import { Image } from '@nextui-org/image';
 
 import { IArticleItem } from '../types';
@@ -11,9 +12,10 @@ export const ArticleItem = memo<IArticleItem>(({ title, url, thumbnail, favicon,
         <Image
           isZoomed
           alt="thumbnail image"
+          as={NextImage}
           className="w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]"
           height={241}
-          loading="lazy"
+          quality={40}
           src={thumbnail}
           width={460}
         />
