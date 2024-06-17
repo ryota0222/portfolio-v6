@@ -4,7 +4,7 @@ import { SectionSubTitle } from '@/cores/SectionSubTitle';
 import { SectionTitle } from '@/cores/SectionTitle';
 import { LINESticker } from '@/features/LINESticker';
 import { SharePortfolioSection } from '@/features/SharePortfolioSection';
-import { TShirtList } from '@/features/TShirt';
+// import { TShirtList } from '@/features/TShirt';
 
 export const HobbySection = memo(() => {
   return (
@@ -33,9 +33,7 @@ export const HobbySection = memo(() => {
             It&apos;s UNIQLO clothing, so it&apos;s very comfortable to wear✨
           </p>
         </div>
-        <div className="mt-16 flex justify-center w-full">
-          <TShirtList />
-        </div>
+        <div className="mt-16 flex justify-center w-full">{/* <TShirtList /> */}</div>
       </section>
       {/*
        * Share
