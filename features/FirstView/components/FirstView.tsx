@@ -7,7 +7,7 @@ import { siteConfig } from '@/config/site';
 export const FirstView = memo(() => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      {/* <NextImage
+      <NextImage
         priority
         alt="profile image"
         className="sm:w-[240px] sm:h-[240px] w-[160px] h-[160px] rounded-full"
@@ -16,7 +16,7 @@ export const FirstView = memo(() => {
         sizes="(max-width: 768px) 160px, 240px"
         src="/images/profile.webp"
         width={160}
-      /> */}
+      />
       <h1 className="font-semibold text-[32px] sm:text-[40px] mt-8 mb-4">RyoTa.</h1>
       <p className="text-zinc-600 text-sm sm:text-md">Design Engineer from 2020.</p>
       <div className="flex gap-6 sm:gap-10 mt-10 sm:mt-8">
