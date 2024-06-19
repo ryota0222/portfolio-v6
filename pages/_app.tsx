@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 
 import localFont from 'next/font/local';
-import { NextUIProvider } from '@nextui-org/react';
+import { NextUIProvider } from '@nextui-org/system';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useRouter } from 'next/router';
 import '@/styles/globals.css';

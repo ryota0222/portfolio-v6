@@ -1,5 +1,5 @@
 import { NavbarItem } from '@nextui-org/navbar';
-import { link as linkStyles } from '@nextui-org/react';
+import { link as linkStyles } from '@nextui-org/theme';
 import NextLink from 'next/link';
 import clsx from 'clsx';
 import { memo } from 'react';
