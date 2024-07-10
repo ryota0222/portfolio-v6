@@ -65,12 +65,12 @@ export const PerformanceScreen = memo(() => {
         description:
           'Evaluates how accessible the content is to users with disabilities. It checks for elements like color contrast, alt text for images, and keyboard navigation.',
       },
-      {
-        title: 'Performance',
-        score: performanceData?.score,
-        description:
-          'Measures how quickly the page loads and becomes interactive. Key metrics include loading speed, responsiveness, and visual stability.',
-      },
+      // {
+      //   title: 'Performance',
+      //   score: performanceData?.score,
+      //   description:
+      //     'Measures how quickly the page loads and becomes interactive. Key metrics include loading speed, responsiveness, and visual stability.',
+      // },
       {
         title: 'SEO',
         score: seoData?.score,
