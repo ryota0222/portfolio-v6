@@ -4,11 +4,11 @@
     "lighthouseResult": {
         "lighthouseVersion": "12.2.0",
         "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/128.0.6613.113 Safari/537.36",
-        "fetchTime": "2024-09-17T15:05:09.398Z",
+        "fetchTime": "2024-09-18T15:05:33.110Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/128.0.6613.113 Safari/537.36",
-            "benchmarkIndex": 268,
+            "benchmarkIndex": 287.5,
             "credits": {
                 "axe-core": "4.9.1"
             }
