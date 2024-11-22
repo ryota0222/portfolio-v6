@@ -3,12 +3,12 @@
     "id": "https://portfolio.site.ryotanny.com/",
     "lighthouseResult": {
         "lighthouseVersion": "12.2.1",
-        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/130.0.6723.116 Safari/537.36",
-        "fetchTime": "2024-11-21T15:05:50.367Z",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.6778.69 Safari/537.36",
+        "fetchTime": "2024-11-22T15:06:23.084Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/130.0.6723.116 Safari/537.36",
-            "benchmarkIndex": 340.5,
+            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.6778.69 Safari/537.36",
+            "benchmarkIndex": 274,
             "credits": {
                 "axe-core": "4.10.0"
             }
@@ -16,7 +16,7 @@
         "performance": {
             "id": "performance",
             "title": "パフォーマンス",
-            "score": 0.39,
+            "score": 0.43,
             "auditRefs": [
                 {
                     "id": "first-contentful-paint",
