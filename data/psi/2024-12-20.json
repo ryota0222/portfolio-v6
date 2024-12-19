@@ -3,12 +3,12 @@
     "id": "https://portfolio.site.ryotanny.com/",
     "lighthouseResult": {
         "lighthouseVersion": "12.2.3",
-        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.6778.108 Safari/537.36",
-        "fetchTime": "2024-12-18T15:05:53.509Z",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.6778.139 Safari/537.36",
+        "fetchTime": "2024-12-19T15:06:01.544Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.6778.108 Safari/537.36",
-            "benchmarkIndex": 302,
+            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.6778.139 Safari/537.36",
+            "benchmarkIndex": 122,
             "credits": {
                 "axe-core": "4.10.2"
             }
