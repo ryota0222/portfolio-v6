@@ -8,6 +8,22 @@ export enum ApplicationType {
 
 export const ApplicationData = [
   {
+    name: 'レシピィズ',
+    link: 'https://apps.apple.com/jp/app/%E3%83%AC%E3%82%B7%E3%83%94%E3%82%A3%E3%82%BA/id6743655151',
+    type: [ApplicationType.Mobile],
+    thumbnailUrl: '/images/services/recipies.webp',
+    skills: [
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+        name: 'React Native',
+      },
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
+        name: 'Figma',
+      },
+    ],
+  },
+  {
     name: 'FigTodo',
     link: 'https://www.figma.com/community/plugin/1376174862254820112',
     type: [ApplicationType.Figma],
