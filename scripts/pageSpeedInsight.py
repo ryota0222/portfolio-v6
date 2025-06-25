@@ -9,7 +9,7 @@ today = "{:%Y-%m-%d}".format(date)
 filename = today + '.json'
 
 # endpoint
-url = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://portfolio.site.ryotanny.com&locale=ja&category=performance&category=seo&category=accessibility&strategy=desktop"
+url = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://portfolio.site.ryotanny.com&locale=ja&category=performance&category=seo&category=accessibility&strategy=desktop&key=AIzaSyB_TlTnMNcwh9NFs7hb67nCulqbZJGo3H0"
 
 # call request
 print('🌟 Curl PageSpeed Insights API')
