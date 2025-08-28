@@ -8,6 +8,26 @@ export enum ApplicationType {
 
 export const ApplicationData = [
   {
+    name: 'ハナコトバ',
+    link: 'https://apps.apple.com/jp/app/%E3%83%8F%E3%83%8A%E3%82%B3%E3%83%88%E3%83%90/id6751450167',
+    type: [ApplicationType.Mobile],
+    thumbnailUrl: '/images/hanakotoba.png',
+    skills: [
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+        name: 'React Native',
+      },
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
+        name: 'Figma',
+      },
+      {
+        image: '/images/claude-color.svg',
+        name: 'Claude',
+      },
+    ],
+  },
+  {
     name: 'レシピィズ',
     link: 'https://apps.apple.com/jp/app/%E3%83%AC%E3%82%B7%E3%83%94%E3%82%A3%E3%82%BA/id6743655151',
     type: [ApplicationType.Mobile],
