@@ -2,13 +2,13 @@
     "kind": "pagespeedonline#result",
     "id": "https://portfolio.site.ryotanny.com/",
     "lighthouseResult": {
-        "lighthouseVersion": "12.8.0",
+        "lighthouseVersion": "12.8.2",
         "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/137.0.7151.119 Safari/537.36",
-        "fetchTime": "2025-09-01T15:04:10.569Z",
+        "fetchTime": "2025-09-02T15:05:29.697Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/137.0.7151.119 Safari/537.36",
-            "benchmarkIndex": 314.5,
+            "benchmarkIndex": 475,
             "credits": {
                 "axe-core": "4.10.3"
             }
@@ -16,7 +16,7 @@
         "performance": {
             "id": "performance",
             "title": "パフォーマンス",
-            "score": 0.68,
+            "score": 0.72,
             "auditRefs": [
                 {
                     "id": "first-contentful-paint",
