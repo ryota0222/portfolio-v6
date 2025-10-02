@@ -4,11 +4,11 @@
     "lighthouseResult": {
         "lighthouseVersion": "12.8.2",
         "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/137.0.7151.119 Safari/537.36",
-        "fetchTime": "2025-10-01T15:04:18.999Z",
+        "fetchTime": "2025-10-02T15:04:10.004Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/137.0.7151.119 Safari/537.36",
-            "benchmarkIndex": 378,
+            "benchmarkIndex": 714.5,
             "credits": {
                 "axe-core": "4.10.3"
             }
@@ -16,7 +16,7 @@
         "performance": {
             "id": "performance",
             "title": "パフォーマンス",
-            "score": 0.72,
+            "score": 0.67,
             "auditRefs": [
                 {
                     "id": "first-contentful-paint",
@@ -184,7 +184,7 @@
             "title": "SEO",
             "description": "これらのチェックを行うことで、ページが検索エンジン最適化の基本的な推奨事項に沿っていることを確認できます。検索ランキングに影響する可能性のある要素には、Lighthouse で考慮されている要素以外に、[ウェブに関する主な指標](https://web.dev/explore/vitals)のスコアなどもあります。[Google 検索の基本事項の詳細](https://support.google.com/webmasters/answer/35769)",
             "manualDescription": "サイトでこれらの他の検証ツールを実行し、SEO のその他のおすすめの方法をご確認ください。",
-            "score": 0.92,
+            "score": 1,
             "auditRefs": [
                 {
                     "id": "is-crawlable",
@@ -213,11 +213,6 @@
                 },
                 {
                     "id": "crawlable-anchors",
-                    "weight": 1,
-                    "group": "seo-crawl"
-                },
-                {
-                    "id": "robots-txt",
                     "weight": 1,
                     "group": "seo-crawl"
                 },
