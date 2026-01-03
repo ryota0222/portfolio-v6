@@ -85,7 +85,7 @@ export const ApplicationData = [
   },
   {
     name: '旧ポートフォリオ',
-    link: 'https://old-portfolio.ryotanny.com',
+    link: 'https://portfolio-old.ryotanny.com',
     type: [ApplicationType.Web, ApplicationType.Pwa],
     thumbnailUrl: '/images/services/portfolio.webp',
     skills: [
