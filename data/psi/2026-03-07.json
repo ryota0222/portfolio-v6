@@ -3,12 +3,12 @@
     "id": "https://site.ryotanny.com/",
     "lighthouseResult": {
         "lighthouseVersion": "13.0.1",
-        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.7559.132 Safari/537.36",
-        "fetchTime": "2026-03-05T15:17:58.894Z",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.116 Safari/537.36",
+        "fetchTime": "2026-03-06T15:12:17.096Z",
         "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.7559.132 Safari/537.36",
-            "benchmarkIndex": 673,
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.116 Safari/537.36",
+            "benchmarkIndex": 863.5,
             "credits": {
                 "axe-core": "4.11.0"
             }
@@ -16,7 +16,7 @@
         "performance": {
             "id": "performance",
             "title": "パフォーマンス",
-            "score": 0.68,
+            "score": 0.84,
             "auditRefs": [
                 {
                     "id": "first-contentful-paint",
