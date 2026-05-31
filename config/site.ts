@@ -34,7 +34,6 @@ export const siteConfig = {
   links: {
     github: 'https://github.com/ryota0222',
     twitter: 'https://x.com/ryota_des_eng',
-    pitta: 'https://pitta.me/matches/RUhiedyaOOtp',
     qiita: 'https://qiita.com/ryotanny',
     zenn: 'https://zenn.dev/ryota0222',
     note: 'https://note.com/ryotanny',
