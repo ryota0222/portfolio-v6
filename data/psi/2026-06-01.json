@@ -4,11 +4,11 @@
     "lighthouseResult": {
         "lighthouseVersion": "13.3.0",
         "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.7680.177 Safari/537.36",
-        "fetchTime": "2026-05-30T15:27:31.700Z",
+        "fetchTime": "2026-05-31T15:29:24.749Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.7680.177 Safari/537.36",
-            "benchmarkIndex": 707,
+            "benchmarkIndex": 587,
             "credits": {
                 "axe-core": "4.11.4"
             }
@@ -16,7 +16,7 @@
         "performance": {
             "id": "performance",
             "title": "パフォーマンス",
-            "score": 0.69,
+            "score": 0.67,
             "auditRefs": [
                 {
                     "id": "first-contentful-paint",
@@ -106,6 +106,11 @@
                     "id": "aria-valid-attr",
                     "weight": 10,
                     "group": "a11y-aria"
+                },
+                {
+                    "id": "button-name",
+                    "weight": 10,
+                    "group": "a11y-names-labels"
                 },
                 {
                     "id": "color-contrast",
