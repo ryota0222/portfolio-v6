@@ -33,7 +33,7 @@ export const FirstView = memo(() => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      <div className="flex min-h-[3em] items-end justify-center px-4 w-full max-w-[320px] sm:max-w-[420px] mb-3">
+      <div className="flex min-h-[3em] items-end justify-center px-4 w-full max-w-[360px] sm:max-w-[540px] mb-3">
         <TypingMessage key={messageIndex} text={PROFILE_MESSAGES[messageIndex]} onComplete={handleTypingComplete} />
       </div>
       <button
