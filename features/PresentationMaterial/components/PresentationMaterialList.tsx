@@ -10,7 +10,7 @@ export const PresentationMaterialList = memo(() => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-between gap-x-6 gap-y-16 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-16 w-full">
       {latestData.map((item) => (
         <PresentationMaterialItem key={item.title} {...item} />
       ))}

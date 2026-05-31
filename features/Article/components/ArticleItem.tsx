@@ -7,20 +7,21 @@ import { IArticleItem } from '../types';
 
 export const ArticleItem = memo<IArticleItem>(({ title, url, thumbnail, favicon, siteName }) => {
   return (
-    <Link className="card" href={url} rel="noopener noreferrer" target="_blank">
-      <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-fit">
+    <Link className="w-full" href={url} rel="noopener noreferrer" target="_blank">
+      <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-full">
         <Image
           isZoomed
           alt="thumbnail image"
           as={NextImage}
-          className="w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]"
+          className="w-full h-auto hover:scale-110"
+          classNames={{ wrapper: 'w-full !max-w-full' }}
           height={241}
           quality={40}
           src={thumbnail}
           width={460}
         />
       </div>
-      <div className="mt-2 w-full lg:w-[40vw] lg:max-w-[460px] md:w-[360px]">{title}</div>
+      <div className="mt-2 w-full">{title}</div>
       <div className="mt-2 flex gap-2 items-center">
         <Image
           alt={`${siteName}のアイコン`}

@@ -8,20 +8,21 @@ import { ApplicationType } from '../constants';
 
 export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumbnailUrl, skills }) => {
   return (
-    <Link className="card" href={link} rel="noopener noreferrer" target="_blank">
-      <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-fit">
+    <Link className="w-full" href={link} rel="noopener noreferrer" target="_blank">
+      <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-full">
         <Image
           isZoomed
           alt="thumbnail image"
           as={NextImage}
-          className="w-full lg:w-[450px] md:w-[360px]"
+          className="w-full h-auto hover:scale-110"
+          classNames={{ wrapper: 'w-full !max-w-full' }}
           height={270}
           quality={40}
           src={thumbnailUrl}
           width={480}
         />
       </div>
-      <div className="mt-2 flex gap-2 items-center w-full lg:w-[450px] md:w-[360px]">
+      <div className="mt-2 flex gap-2 items-center w-full">
         <span className="sm:text-md text-sm">{name}</span>
         {type.map((t) => (
           <span
