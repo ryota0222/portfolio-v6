@@ -22,7 +22,7 @@ export const AboutPortfolioSection = memo(() => {
       <Image
         alt="background image"
         as={NextImage}
-        className="w-full"
+        className="w-full h-auto"
         height={874}
         radius="none"
         src="/images/dark-gradient.png"
