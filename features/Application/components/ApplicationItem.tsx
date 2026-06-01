@@ -14,7 +14,7 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
           isZoomed
           alt="thumbnail image"
           as={NextImage}
-          className="w-full h-full object-cover hover:scale-110"
+          className="w-full !h-full object-cover hover:scale-110"
           classNames={{ wrapper: 'w-full h-full !max-w-full', zoomedWrapper: 'w-full h-full' }}
           height={270}
           quality={40}

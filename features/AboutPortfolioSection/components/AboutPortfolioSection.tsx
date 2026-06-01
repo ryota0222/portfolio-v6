@@ -23,7 +23,7 @@ export const AboutPortfolioSection = memo(() => {
         <Image
           alt="background image"
           as={NextImage}
-          className="w-full h-full object-cover"
+          className="w-full !h-full object-cover"
           classNames={{ wrapper: 'w-full h-full !max-w-full' }}
           height={874}
           radius="none"
