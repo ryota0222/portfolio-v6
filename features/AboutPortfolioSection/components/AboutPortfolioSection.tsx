@@ -19,15 +19,18 @@ const SharePortfolioSection = dynamic(
 export const AboutPortfolioSection = memo(() => {
   return (
     <>
-      <Image
-        alt="background image"
-        as={NextImage}
-        className="w-full h-auto"
-        height={874}
-        radius="none"
-        src="/images/dark-gradient.png"
-        width={2880}
-      />
+      <div className="w-full aspect-[2880/874] overflow-hidden">
+        <Image
+          alt="background image"
+          as={NextImage}
+          className="w-full h-full object-cover"
+          classNames={{ wrapper: 'w-full h-full !max-w-full' }}
+          height={874}
+          radius="none"
+          src="/images/dark-gradient.png"
+          width={2880}
+        />
+      </div>
       <div className="py-24 bg-zinc-800">
         <section className="container mx-auto max-w-5xl px-6 flex-grow">
           <PerformanceScreen />
