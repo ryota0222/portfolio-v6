@@ -12,6 +12,11 @@ module.exports = {
   theme: {
     extend: {},
   },
+  // タッチ端末でhover:のズーム等が「タップ後に固定」される問題を防ぐため、
+  // hover系ユーティリティを (hover: hover) 対応端末のみに限定する
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   plugins: [
     nextui({
       themes: {
