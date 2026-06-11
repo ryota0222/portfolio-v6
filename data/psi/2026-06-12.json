@@ -4,11 +4,11 @@
     "lighthouseResult": {
         "lighthouseVersion": "13.3.0",
         "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.7680.177 Safari/537.36",
-        "fetchTime": "2026-06-10T16:17:23.433Z",
+        "fetchTime": "2026-06-11T16:23:22.872Z",
         "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.7680.177 Safari/537.36",
-            "benchmarkIndex": 634,
+            "benchmarkIndex": 716,
             "credits": {
                 "axe-core": "4.11.4"
             }
@@ -16,7 +16,7 @@
         "performance": {
             "id": "performance",
             "title": "パフォーマンス",
-            "score": 0.83,
+            "score": 0.81,
             "auditRefs": [
                 {
                     "id": "first-contentful-paint",
