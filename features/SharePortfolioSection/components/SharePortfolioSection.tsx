@@ -16,7 +16,6 @@ export const SharePortfolioSection = memo<Props>(({ isLast }) => {
           <Image
             alt="profile image"
             className="sm:w-[100px] sm:h-[100px] w-[64px] h-[64px]"
-            loading="lazy"
             radius="full"
             src="/images/icon.png"
           />
@@ -34,7 +33,6 @@ export const SharePortfolioSection = memo<Props>(({ isLast }) => {
           <Image
             alt="Xのアイコン"
             className="w-10 sm:w-16 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            loading="lazy"
             src="/images/share/x.png"
           />
         </Link>
@@ -46,7 +44,6 @@ export const SharePortfolioSection = memo<Props>(({ isLast }) => {
           <Image
             alt="Linkedinのアイコン"
             className="w-10 sm:w-16 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            loading="lazy"
             src="/images/share/linkedin.png"
           />
         </Link>
@@ -54,7 +51,6 @@ export const SharePortfolioSection = memo<Props>(({ isLast }) => {
           <Image
             alt="LINEのアイコン"
             className="w-10 sm:w-16 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            loading="lazy"
             src="/images/share/line.png"
           />
         </Link>
@@ -62,7 +58,6 @@ export const SharePortfolioSection = memo<Props>(({ isLast }) => {
           <Image
             alt="Facebookのアイコン"
             className="w-10 sm:w-16 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            loading="lazy"
             src="/images/share/facebook.png"
           />
         </Link>

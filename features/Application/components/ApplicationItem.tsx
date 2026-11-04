@@ -51,7 +51,6 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
             key={skill.name}
             alt={`${skill.name}のアイコン`}
             height={20}
-            loading="lazy"
             radius="none"
             src={skill.image}
             title={skill.name}
