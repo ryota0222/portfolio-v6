@@ -23,15 +23,7 @@ export const ArticleItem = memo<IArticleItem>(({ title, url, thumbnail, favicon,
       </div>
       <div className="mt-2 w-full">{title}</div>
       <div className="mt-2 flex gap-2 items-center">
-        <Image
-          alt={`${siteName}のアイコン`}
-          height={20}
-          loading="lazy"
-          radius="none"
-          src={favicon}
-          title={siteName}
-          width={20}
-        />
+        <Image alt={`${siteName}のアイコン`} height={20} radius="none" src={favicon} title={siteName} width={20} />
         <span>{siteName}</span>
       </div>
     </Link>

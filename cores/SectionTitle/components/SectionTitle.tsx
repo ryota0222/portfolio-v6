@@ -14,15 +14,7 @@ export const SectionTitle = memo<PropsWithChildren<Props>>(({ index, children })
           <Image alt="1" as={NextImage} height={23} radius="none" src="/images/section/01.svg" width={27} />
         )}
         {index === 2 && (
-          <Image
-            alt="2"
-            as={NextImage}
-            height={23}
-            loading="lazy"
-            radius="none"
-            src="/images/section/02.svg"
-            width={27}
-          />
+          <Image alt="2" as={NextImage} height={23} radius="none" src="/images/section/02.svg" width={27} />
         )}
       </span>
       <span aria-hidden className="w-[1px] h-8 bg-zinc-600 mt-4" role="presentation" />
