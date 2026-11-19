@@ -8,6 +8,34 @@ export enum ApplicationType {
 
 export const ApplicationData = [
   {
+    name: 'Cairn',
+    link: 'https://cairn-app.ryotanny.com',
+    type: [ApplicationType.Web],
+    thumbnailUrl: '/images/services/cairn.png',
+    skills: [
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+        name: 'Next.js',
+      },
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg',
+        name: 'Cloudflare',
+      },
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
+        name: 'PostgreSQL',
+      },
+      {
+        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
+        name: 'Figma',
+      },
+      {
+        image: '/images/claude-color.svg',
+        name: 'Claude',
+      },
+    ],
+  },
+  {
     name: 'コーヒー diary',
     link: 'https://apps.apple.com/jp/app/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC-diary/id6769219379',
     type: [ApplicationType.Mobile],
