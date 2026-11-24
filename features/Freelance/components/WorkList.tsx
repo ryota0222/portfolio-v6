@@ -6,10 +6,12 @@ import { WorkItem } from './WorkItem';
 
 export const WorkList = memo(() => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full" role="list">
       {WorkData.map((work) => (
-        <WorkItem key={work.title} {...work} />
+        <li key={work.title}>
+          <WorkItem {...work} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 });

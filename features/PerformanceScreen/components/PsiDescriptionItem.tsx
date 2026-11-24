@@ -1,5 +1,6 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import { VisuallyHidden } from '@react-aria/visually-hidden';
 
 import { PsiData } from '../types';
 import * as functions from '../functions';
@@ -45,9 +46,12 @@ export const PsiDescriptionItem = memo<Props>(({ data }) => {
       <div className="h-32 w-32 relative">
         {isVisible && (
           <>
-            <Doughnut data={functions.getChartData(data.score ?? 0)} />
+            <div aria-hidden="true">
+              <Doughnut data={functions.getChartData(data.score ?? 0)} />
+            </div>
             <span className="text-white text-lg absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-              {(data.score || 0) * 100}
+              {Math.round((data.score || 0) * 100)}
+              <VisuallyHidden>点</VisuallyHidden>
             </span>
           </>
         )}

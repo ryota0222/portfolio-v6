@@ -2,6 +2,7 @@ import type { Chart as ChartJS, ChartTypeRegistry, Point, BubbleDataPoint, Chart
 import type { ReportData } from '../types';
 
 import dayjs from '@/libs/dayjs';
+import { prefersReducedMotion } from '@/libs/prefersReducedMotion';
 
 const colors = [
   '#fb7185',
@@ -63,7 +64,7 @@ export const getChartData = (score: number): ChartData<'doughnut', number[], str
         },
         borderWidth: 0,
         animation: {
-          duration: 2000,
+          duration: prefersReducedMotion() ? 0 : 2000,
         },
       },
     ],

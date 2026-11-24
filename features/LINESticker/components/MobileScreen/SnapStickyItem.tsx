@@ -1,10 +1,20 @@
 import { Image } from '@nextui-org/image';
+import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { memo } from 'react';
 
 import { StickerCard } from '../StickerCard';
 import { StickerType } from '../../types';
+import { STICKER_NAME } from '../../constants';
 
 import { LinkButton } from '@/features/LinkButton';
+
+const PREVIEW_SRC: Record<StickerType, string> = {
+  [StickerType.Usamayusan]: '/images/sticker/usamayusan/preview.webp',
+  [StickerType.Penguin]: '/images/sticker/penguin/preview.webp',
+  [StickerType.Hiyoko]: '/images/sticker/hiyoko/preview.webp',
+  [StickerType.Emojin]: '/images/sticker/emojin/preview.webp',
+  [StickerType.Otoko]: '/images/sticker/otoko/preview.webp',
+};
 
 interface Props {
   type: StickerType;
@@ -12,50 +22,24 @@ interface Props {
 }
 
 export const SnapStickyItem = memo<Props>(({ type, href }) => {
+  const name = STICKER_NAME[type];
+
   return (
     <div className="w-full snap-start">
       <div className="relative">
-        {type === StickerType.Usamayusan ? (
-          <Image
-            alt="preview of sticker"
-            className="w-[80vw] min-w-[80vw]"
-            src="/images/sticker/usamayusan/preview.webp"
-          />
-        ) : type === StickerType.Penguin ? (
-          <Image
-            alt="preview of sticker"
-            className="w-[80vw] min-w-[80vw]"
-            src="/images/sticker/penguin/preview.webp"
-          />
-        ) : type === StickerType.Hiyoko ? (
-          <Image alt="preview of sticker" className="w-[80vw] min-w-[80vw]" src="/images/sticker/hiyoko/preview.webp" />
-        ) : type === StickerType.Emojin ? (
-          <Image alt="preview of sticker" className="w-[80vw] min-w-[80vw]" src="/images/sticker/emojin/preview.webp" />
-        ) : type === StickerType.Otoko ? (
-          <Image alt="preview of sticker" className="w-[80vw] min-w-[80vw]" src="/images/sticker/otoko/preview.webp" />
-        ) : null}
+        <Image alt={`${name}のスタンプのプレビュー`} className="w-[80vw] min-w-[80vw]" src={PREVIEW_SRC[type]} />
         <div className="absolute bottom-2 left-4 z-10">
           <StickerCard hiddenLabel withBorder type={type} />
         </div>
       </div>
       <div className="flex justify-center my-2">
-        <span className="text-sm">
-          {type === StickerType.Usamayusan
-            ? 'うさまゆさん'
-            : type === StickerType.Penguin
-              ? '飛ばないペンギン'
-              : type === StickerType.Hiyoko
-                ? 'ひよっこエンジニア'
-                : type === StickerType.Emojin
-                  ? 'えもじん'
-                  : type === StickerType.Otoko
-                    ? 'まんまる おとこのこ'
-                    : ''}
-        </span>
+        <span className="text-sm">{name}</span>
       </div>
       <div className="flex justify-center my-6">
         <LinkButton isExternal href={href} type="solid">
           See details
+          {/* 同じ「See details」が並ぶため、どのスタンプのリンクかを読み上げで補う */}
+          <VisuallyHidden>：{name}</VisuallyHidden>
         </LinkButton>
       </div>
     </div>

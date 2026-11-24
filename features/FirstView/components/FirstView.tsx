@@ -2,26 +2,39 @@
 
 import { Link } from '@nextui-org/link';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
+import { useReducedMotion } from 'framer-motion';
 import NextImage from 'next/image';
 
 import { TypingMessage } from './TypingMessage';
 
 import { siteConfig } from '@/config/site';
+import { NewTabLabel } from '@/cores/NewTabLabel';
 import { MESSAGE_READ_PAUSE, PROFILE_MESSAGES } from '@/features/FirstView/constants';
+
+const SOCIAL_LINKS = [
+  { name: 'X', href: siteConfig.links.twitter, src: '/images/x.svg', size: 36 },
+  { name: 'GitHub', href: siteConfig.links.github, src: '/images/github.svg', size: 40 },
+  { name: 'Zenn', href: siteConfig.links.zenn, src: '/images/zenn.svg', size: 40 },
+  { name: 'Qiita', href: siteConfig.links.qiita, src: '/images/qiita.png', size: 40 },
+  { name: 'note', href: siteConfig.links.note, src: '/images/note.svg', size: 36 },
+] as const;
 
 export const FirstView = memo(() => {
   const [messageIndex, setMessageIndex] = useState(0);
   const pauseTimer = useRef<ReturnType<typeof setTimeout>>();
+  const shouldReduceMotion = useReducedMotion();
 
   const goToNextMessage = useCallback(() => {
     setMessageIndex((prev) => (prev + 1) % PROFILE_MESSAGES.length);
   }, []);
 
   // 1メッセージを打ち終わったら、少し読む間を置いてから次の文へ進む。
+  // モーション過敏設定の場合は自動では切り替えず、クリックしたときだけ進める。
   const handleTypingComplete = useCallback(() => {
     clearTimeout(pauseTimer.current);
+    if (shouldReduceMotion) return;
     pauseTimer.current = setTimeout(goToNextMessage, MESSAGE_READ_PAUSE);
-  }, [goToNextMessage]);
+  }, [goToNextMessage, shouldReduceMotion]);
 
   // ペンギンをクリックしたら待ち時間を飛ばして即座に次の文へ。
   const handleClick = useCallback(() => {
@@ -44,7 +57,7 @@ export const FirstView = memo(() => {
       >
         <NextImage
           priority
-          alt="profile image"
+          alt=""
           className="sm:w-[240px] sm:h-[240px] w-[160px] h-[160px] rounded-full"
           height={160}
           quality={50}
@@ -55,58 +68,23 @@ export const FirstView = memo(() => {
       </button>
       <h1 className="font-semibold text-[32px] sm:text-[40px] mt-8 mb-4">RyoTa.</h1>
       <p className="text-zinc-600 text-sm sm:text-md">Design Engineer from 2020.</p>
-      <div className="flex gap-6 sm:gap-10 mt-10 sm:mt-8">
-        <Link isExternal className="group" href={siteConfig.links.twitter}>
-          <NextImage
-            priority
-            alt="logo"
-            className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            height={36}
-            src="/images/x.svg"
-            width={36}
-          />
-        </Link>
-        <Link isExternal className="group" href={siteConfig.links.github}>
-          <NextImage
-            priority
-            alt="logo"
-            className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            height={40}
-            src="/images/github.svg"
-            width={40}
-          />
-        </Link>
-        <Link isExternal className="group" href={siteConfig.links.zenn}>
-          <NextImage
-            priority
-            alt="logo"
-            className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            height={40}
-            src="/images/zenn.svg"
-            width={40}
-          />
-        </Link>
-        <Link isExternal className="group" href={siteConfig.links.qiita}>
-          <NextImage
-            priority
-            alt="logo"
-            className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            height={40}
-            src="/images/qiita.png"
-            width={40}
-          />
-        </Link>
-        <Link isExternal className="group" href={siteConfig.links.note}>
-          <NextImage
-            priority
-            alt="logo"
-            className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-rotate-[8deg] group-hover:-translate-y-1"
-            height={36}
-            src="/images/note.svg"
-            width={36}
-          />
-        </Link>
-      </div>
+      <ul className="flex gap-6 sm:gap-10 mt-10 sm:mt-8" role="list">
+        {SOCIAL_LINKS.map((link) => (
+          <li key={link.name} className="flex items-center">
+            <Link isExternal className="group" href={link.href}>
+              <NextImage
+                priority
+                alt={link.name}
+                className="motion-safe:transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] motion-safe:group-hover:-rotate-[8deg] motion-safe:group-hover:-translate-y-1"
+                height={link.size}
+                src={link.src}
+                width={link.size}
+              />
+              <NewTabLabel />
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 });

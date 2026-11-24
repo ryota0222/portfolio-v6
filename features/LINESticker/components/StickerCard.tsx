@@ -3,6 +3,7 @@ import { memo } from 'react';
 import NextImage from 'next/image';
 
 import { StickerType } from '../types';
+import { STICKER_NAME } from '../constants';
 
 interface Props {
   type: StickerType;
@@ -11,6 +12,8 @@ interface Props {
 }
 
 export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder = false }) => {
+  const name = STICKER_NAME[type];
+
   return (
     <div className="flex flex-col items-center gap-2 hover:cursor-pointer">
       <div
@@ -18,10 +21,11 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           withBorder ? 'border-zinc-300' : 'border-zinc-50'
         } hover:border-zinc-300`}
       >
+        {/* スタンプ名は必ず文字で表示される（ここか呼び出し側）ため、画像は装飾扱いにして二重の読み上げを防ぐ */}
         {/* うさまゆさん */}
         {type === StickerType.Usamayusan && (
           <Image
-            alt="うさまゆさんのスタンプ"
+            alt=""
             as={NextImage}
             className="w-full"
             height={136}
@@ -33,7 +37,7 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {/* 飛ばないペンギン */}
         {type === StickerType.Penguin && (
           <Image
-            alt="飛ばないペンギンのスタンプ"
+            alt=""
             as={NextImage}
             className="w-full"
             height={136}
@@ -45,7 +49,7 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {/* ひよっこエンジニア */}
         {type === StickerType.Hiyoko && (
           <Image
-            alt="ひよっこエンジニアのスタンプ"
+            alt=""
             as={NextImage}
             className="w-full"
             height={136}
@@ -57,7 +61,7 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {/* えもじん */}
         {type === StickerType.Emojin && (
           <Image
-            alt="えもじんのスタンプ"
+            alt=""
             as={NextImage}
             className="w-full"
             height={136}
@@ -69,7 +73,7 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
         {/* まんまる おとこのこ */}
         {type === StickerType.Otoko && (
           <Image
-            alt="まんまる おとこのこのスタンプ"
+            alt=""
             as={NextImage}
             className="w-full"
             height={136}
@@ -79,21 +83,7 @@ export const StickerCard = memo<Props>(({ type, hiddenLabel = false, withBorder 
           />
         )}
       </div>
-      {!hiddenLabel && (
-        <span className="text-sm text-black">
-          {type === StickerType.Usamayusan
-            ? 'うさまゆさん'
-            : type === StickerType.Penguin
-              ? '飛ばないペンギン'
-              : type === StickerType.Hiyoko
-                ? 'ひよっこエンジニア'
-                : type === StickerType.Emojin
-                  ? 'えもじん'
-                  : type === StickerType.Otoko
-                    ? 'まんまる おとこのこ'
-                    : ''}
-        </span>
-      )}
+      {!hiddenLabel && <span className="text-sm text-black">{name}</span>}
     </div>
   );
 });

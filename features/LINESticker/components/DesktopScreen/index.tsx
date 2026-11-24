@@ -16,15 +16,32 @@ export const DesktopScreen = memo(() => {
         <PreviewImage
           selected={selectedType === StickerType.Usamayusan}
           src="/images/sticker/usamayusan/preview.webp"
+          type={StickerType.Usamayusan}
         />
         {/* 飛ばないペンギン */}
-        <PreviewImage selected={selectedType === StickerType.Penguin} src="/images/sticker/penguin/preview.webp" />
+        <PreviewImage
+          selected={selectedType === StickerType.Penguin}
+          src="/images/sticker/penguin/preview.webp"
+          type={StickerType.Penguin}
+        />
         {/* ひよっこエンジニア */}
-        <PreviewImage selected={selectedType === StickerType.Hiyoko} src="/images/sticker/hiyoko/preview.webp" />
+        <PreviewImage
+          selected={selectedType === StickerType.Hiyoko}
+          src="/images/sticker/hiyoko/preview.webp"
+          type={StickerType.Hiyoko}
+        />
         {/* えもじん */}
-        <PreviewImage selected={selectedType === StickerType.Emojin} src="/images/sticker/emojin/preview.webp" />
+        <PreviewImage
+          selected={selectedType === StickerType.Emojin}
+          src="/images/sticker/emojin/preview.webp"
+          type={StickerType.Emojin}
+        />
         {/* まんまる おとこのこ */}
-        <PreviewImage selected={selectedType === StickerType.Otoko} src="/images/sticker/otoko/preview.webp" />
+        <PreviewImage
+          selected={selectedType === StickerType.Otoko}
+          src="/images/sticker/otoko/preview.webp"
+          type={StickerType.Otoko}
+        />
       </div>
       {/* 右パネル */}
       <div className="flex-1 flex flex-wrap gap-10 h-fit">

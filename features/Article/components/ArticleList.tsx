@@ -6,10 +6,12 @@ import RssData from '@/data/latestRss.json';
 
 export const ArticleList = memo(() => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-16 w-full">
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-16 w-full" role="list">
       {RssData.slice(0, 4).map((item) => (
-        <ArticleItem key={item.title} {...item} />
+        <li key={item.title}>
+          <ArticleItem {...item} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 });

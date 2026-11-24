@@ -6,7 +6,8 @@
   width: fit-content;
 }
 
-.sticker-card:hover .hover-button {
+.sticker-card:hover .hover-button,
+.sticker-link:focus-visible .hover-button {
   opacity: 1;
   transition: all 0.3s;
 }
@@ -35,4 +36,42 @@
   -webkit-background-clip: text;
   color: transparent;
   animation: gradient 12s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+  }
+}
+
+/*
+ * 蛍光ペン風のマーカー
+ * インライン要素の背景は複数行でも1本の帯として扱われるため、
+ * background-size を 0% → 100% にすると1行目から順に線が引かれていく。
+ */
+.marker {
+  --marker-height: 0.62em;
+  padding: 0 0.08em;
+  background-image: linear-gradient(
+    100deg,
+    rgb(255 149 225 / 0.42),
+    rgb(174 126 222 / 0.3) 35%,
+    rgb(102 170 249 / 0.3) 65%,
+    rgb(126 231 252 / 0.45)
+  );
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 0% var(--marker-height);
+  transition: background-size 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s;
+}
+
+.marker[data-drawn='true'] {
+  background-size: 100% var(--marker-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marker {
+    background-size: 100% var(--marker-height);
+    transition: none;
+  }
 }
