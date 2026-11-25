@@ -3,12 +3,12 @@
     "id": "https://site.ryotanny.com/",
     "lighthouseResult": {
         "lighthouseVersion": "13.6.0",
-        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.36 Safari/537.36",
-        "fetchTime": "2026-11-03T20:44:59.113Z",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.8103.38 Safari/537.36",
+        "fetchTime": "2026-11-25T08:55:35.520Z",
         "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.36 Safari/537.36",
-            "benchmarkIndex": 1328.5,
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.8103.38 Safari/537.36",
+            "benchmarkIndex": 831.5,
             "credits": {
                 "axe-core": "4.14.0"
             }
@@ -93,6 +93,11 @@
                     "group": "a11y-aria"
                 },
                 {
+                    "id": "aria-required-children",
+                    "weight": 10,
+                    "group": "a11y-aria"
+                },
+                {
                     "id": "aria-roles",
                     "weight": 10,
                     "group": "a11y-aria"
@@ -143,14 +148,14 @@
                     "group": "a11y-names-labels"
                 },
                 {
+                    "id": "link-in-text-block",
+                    "weight": 7,
+                    "group": "a11y-color-contrast"
+                },
+                {
                     "id": "link-name",
                     "weight": 7,
                     "group": "a11y-names-labels"
-                },
-                {
-                    "id": "list",
-                    "weight": 7,
-                    "group": "a11y-tables-lists"
                 },
                 {
                     "id": "listitem",
@@ -175,6 +180,11 @@
                 {
                     "id": "landmark-one-main",
                     "weight": 3,
+                    "group": "a11y-best-practices"
+                },
+                {
+                    "id": "presentation-role-conflict",
+                    "weight": 1,
                     "group": "a11y-best-practices"
                 }
             ]
@@ -213,6 +223,11 @@
                 },
                 {
                     "id": "crawlable-anchors",
+                    "weight": 1,
+                    "group": "seo-crawl"
+                },
+                {
+                    "id": "robots-txt",
                     "weight": 1,
                     "group": "seo-crawl"
                 },
