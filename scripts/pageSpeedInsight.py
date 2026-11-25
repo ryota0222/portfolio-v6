@@ -19,7 +19,7 @@ if not api_key:
 # endpoint
 url = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
 params = [
-    ("url", "https://portfolio.site.ryotanny.com"),
+    ("url", "https://site.ryotanny.com"),
     ("locale", "ja"),
     ("category", "performance"),
     ("category", "seo"),

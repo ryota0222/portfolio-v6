@@ -39,5 +39,5 @@ export const siteConfig = {
     note: 'https://note.com/ryotanny',
     lazurate: 'https://lazurate.co.jp/',
   },
-  url: 'https://portfolio.site.ryotanny.com',
+  url: 'https://site.ryotanny.com',
 };

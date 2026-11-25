@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio.site.ryotanny.com/sitemap.xml
+Sitemap: https://site.ryotanny.com/sitemap.xml
