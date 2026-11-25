@@ -51,7 +51,7 @@ export const PsiDescriptionItem = memo<Props>(({ data }) => {
             </div>
             <span className="text-white text-lg absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
               {Math.round((data.score || 0) * 100)}
-              <VisuallyHidden>点</VisuallyHidden>
+              <VisuallyHidden elementType="span">点</VisuallyHidden>
             </span>
           </>
         )}

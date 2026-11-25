@@ -60,7 +60,7 @@ export const TypingMessage = memo(({ text, onComplete }: Props) => {
         {text.slice(0, count)}
         {!isDone && <span className="ml-0.5 inline-block w-px animate-pulse text-zinc-400">|</span>}
       </span>
-      <VisuallyHidden>{text}</VisuallyHidden>
+      <VisuallyHidden elementType="span">{text}</VisuallyHidden>
     </p>
   );
 });

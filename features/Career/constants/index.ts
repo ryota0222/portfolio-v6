@@ -1,26 +1,34 @@
-export const CareerData = [
+import { siteConfig } from '@/config/site';
+import { IPeriod } from '@/cores/Period';
+
+interface ICareer {
+  period: IPeriod;
+  label: string;
+  note?: string;
+  href?: string;
+}
+
+export const CareerData: ICareer[] = [
   {
-    date: '2024-06',
-    label: 'ラズレイト株式会社入社',
+    period: { start: '2024-06', end: 'present' },
+    label: 'ラズレイト株式会社',
+    note: '役員',
+    href: siteConfig.links.lazurate,
   },
   {
-    date: '2024-03',
-    label: '株式会社ニュートラル退社',
+    period: { start: '2024-04', end: '2024-06' },
+    label: 'フリーランス',
   },
   {
-    date: '2023-01',
-    label: '株式会社ニュートラル入社',
+    period: { start: '2023-01', end: '2024-03' },
+    label: '株式会社ニュートラル',
   },
   {
-    date: '2022-12',
-    label: '株式会社神戸デジタル・ラボ退社',
+    period: { start: '2020-04', end: '2022-12' },
+    label: '株式会社神戸デジタル・ラボ',
   },
   {
-    date: '2020-04',
-    label: '株式会社神戸デジタル・ラボ入社',
-  },
-  {
-    date: '2020-03',
-    label: '神戸大学　工学部　機械工学科卒業',
+    period: { start: '2020-03' },
+    label: '神戸大学 工学部 機械工学科 卒業',
   },
 ];

@@ -4,4 +4,5 @@ export enum StickerType {
   Hiyoko,
   Emojin,
   Otoko,
+  Ojibaby,
 }

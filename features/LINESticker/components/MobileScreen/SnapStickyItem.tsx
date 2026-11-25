@@ -4,17 +4,9 @@ import { memo } from 'react';
 
 import { StickerCard } from '../StickerCard';
 import { StickerType } from '../../types';
-import { STICKER_NAME } from '../../constants';
+import { STICKER_NAME, stickerPreviewSrc } from '../../constants';
 
 import { LinkButton } from '@/features/LinkButton';
-
-const PREVIEW_SRC: Record<StickerType, string> = {
-  [StickerType.Usamayusan]: '/images/sticker/usamayusan/preview.webp',
-  [StickerType.Penguin]: '/images/sticker/penguin/preview.webp',
-  [StickerType.Hiyoko]: '/images/sticker/hiyoko/preview.webp',
-  [StickerType.Emojin]: '/images/sticker/emojin/preview.webp',
-  [StickerType.Otoko]: '/images/sticker/otoko/preview.webp',
-};
 
 interface Props {
   type: StickerType;
@@ -27,7 +19,7 @@ export const SnapStickyItem = memo<Props>(({ type, href }) => {
   return (
     <div className="w-full snap-start">
       <div className="relative">
-        <Image alt={`${name}のスタンプのプレビュー`} className="w-[80vw] min-w-[80vw]" src={PREVIEW_SRC[type]} />
+        <Image alt={`${name}のスタンプのプレビュー`} className="w-[80vw] min-w-[80vw]" src={stickerPreviewSrc(type)} />
         <div className="absolute bottom-2 left-4 z-10">
           <StickerCard hiddenLabel withBorder type={type} />
         </div>
@@ -39,7 +31,7 @@ export const SnapStickyItem = memo<Props>(({ type, href }) => {
         <LinkButton isExternal href={href} type="solid">
           See details
           {/* 同じ「See details」が並ぶため、どのスタンプのリンクかを読み上げで補う */}
-          <VisuallyHidden>：{name}</VisuallyHidden>
+          <VisuallyHidden elementType="span">：{name}</VisuallyHidden>
         </LinkButton>
       </div>
     </div>
