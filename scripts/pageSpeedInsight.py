@@ -1,4 +1,6 @@
 import datetime
+import os
+import sys
 import requests
 import json
 
@@ -8,18 +10,41 @@ date = datetime.datetime.now() + datetime.timedelta(hours=DIFF_JST_FROM_UTC)
 today = "{:%Y-%m-%d}".format(date)
 filename = today + '.json'
 
+# API key (GitHub Secrets から環境変数で受け取る)
+api_key = os.environ.get("PSI_API_KEY")
+
+if not api_key:
+    sys.exit("❌ 環境変数 PSI_API_KEY が設定されていません")
+
 # endpoint
-url = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://portfolio.site.ryotanny.com&locale=ja&category=performance&category=seo&category=accessibility&strategy=desktop&key=AIzaSyB_TlTnMNcwh9NFs7hb67nCulqbZJGo3H0"
+url = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+params = [
+    ("url", "https://portfolio.site.ryotanny.com"),
+    ("locale", "ja"),
+    ("category", "performance"),
+    ("category", "seo"),
+    ("category", "accessibility"),
+    ("strategy", "desktop"),
+    ("key", api_key),
+]
 
 # call request
 print('🌟 Curl PageSpeed Insights API')
 
-res = requests.get(url)
-
-print('✅ Fetched PageSpeed Insights Data')
+res = requests.get(url, params=params, timeout=180)
 
 # convert response to JSON
-jsonData = res.json()
+try:
+    jsonData = res.json()
+except ValueError:
+    sys.exit(f"❌ JSON 以外のレスポンスを受け取りました (HTTP {res.status_code})")
+
+# API がエラーを返した場合は内容を出力して終了する
+if res.status_code != 200 or "error" in jsonData:
+    error = jsonData.get("error", {})
+    sys.exit(f"❌ PageSpeed Insights API がエラーを返しました (HTTP {res.status_code}): {error.get('message', jsonData)}")
+
+print('✅ Fetched PageSpeed Insights Data')
 
 # shape
 jsonfile = {}
