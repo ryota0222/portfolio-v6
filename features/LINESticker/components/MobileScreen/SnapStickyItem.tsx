@@ -39,7 +39,7 @@ export const SnapStickyItem = memo<Props>(({ type, href }) => {
         <LinkButton isExternal href={href} type="solid">
           See details
           {/* 同じ「See details」が並ぶため、どのスタンプのリンクかを読み上げで補う */}
-          <VisuallyHidden>：{name}</VisuallyHidden>
+          <VisuallyHidden elementType="span">：{name}</VisuallyHidden>
         </LinkButton>
       </div>
     </div>
