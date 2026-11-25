@@ -13,7 +13,7 @@ export const Head = () => {
       <meta content="summary_large_image" name="twitter:card" />
       <meta content="ja_JP" property="og:locale" />
       <meta content={siteConfig.name} property="og:site_name" />
-      <meta content="https://portfolio.site.ryotanny.com/images/mv.png" property="og:image" />
+      <meta content="https://site.ryotanny.com/images/mv.png" property="og:image" />
       <meta content="9MPbZA6u1JTMeuLTl8TdtDjKbG8NwY22OPI0f09L8OU" name="google-site-verification" />
       <meta
         key="viewport"
