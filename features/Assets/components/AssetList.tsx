@@ -34,11 +34,13 @@ export const AssetList = memo(() => {
   return (
     <>
       <AssetTitle />
-      <div className="flex flex-wrap justify-between gap-x-6 gap-y-16 w-full mt-16 mb-40">
+      <ul className="flex flex-wrap justify-between gap-x-6 gap-y-16 w-full mt-16 mb-40" role="list">
         {latestData.map((item) => (
-          <ArticleItem key={item.title} {...item} />
+          <li key={item.title} className="w-full">
+            <ArticleItem {...item} />
+          </li>
         ))}
-      </div>
+      </ul>
     </>
   );
 });

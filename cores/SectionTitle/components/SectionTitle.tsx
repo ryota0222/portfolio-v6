@@ -18,7 +18,7 @@ export const SectionTitle = memo<PropsWithChildren<Props>>(({ index, children })
         )}
       </span>
       <span aria-hidden className="w-[1px] h-8 bg-zinc-600 mt-4" role="presentation" />
-      <h1 className="sm:text-[40px] text-[32px] font-semibold">{children}</h1>
+      <h2 className="sm:text-[40px] text-[32px] font-semibold">{children}</h2>
     </div>
   );
 });

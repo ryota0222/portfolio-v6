@@ -21,7 +21,7 @@ export const AboutPortfolioSection = memo(() => {
     <>
       <div className="w-full aspect-[2880/874] overflow-hidden">
         <Image
-          alt="background image"
+          alt=""
           as={NextImage}
           className="w-full !h-full object-cover"
           classNames={{ wrapper: 'w-full h-full !max-w-full' }}

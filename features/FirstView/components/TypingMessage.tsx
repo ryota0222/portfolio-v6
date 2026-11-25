@@ -2,15 +2,16 @@
 
 import { memo, useEffect, useState } from 'react';
 import { useReducedMotion } from 'framer-motion';
+import { VisuallyHidden } from '@react-aria/visually-hidden';
 
 import { TYPING_SPEED } from '@/features/FirstView/constants';
 
-type Props = {
+interface Props {
   /** 表示するメッセージ全文 */
   text: string;
   /** 打ち終わったときに呼ばれる */
   onComplete: () => void;
-};
+}
 
 export const TypingMessage = memo(({ text, onComplete }: Props) => {
   const shouldReduceMotion = useReducedMotion();
@@ -51,14 +52,15 @@ export const TypingMessage = memo(({ text, onComplete }: Props) => {
     onComplete();
   }, [isDone, onComplete]);
 
+  // 1文字ずつ増える表示はスクリーンリーダーには隠し、全文を別に渡す。
+  // aria-live にすると1文字ごとに読み上げが割り込むため使わない。
   return (
-    <p
-      aria-live="polite"
-      className="w-full min-h-[1.5em] text-center font-bold text-sm sm:text-md text-zinc-700"
-      role="status"
-    >
-      {text.slice(0, count)}
-      {!isDone && <span className="ml-0.5 inline-block w-px animate-pulse text-zinc-400">|</span>}
+    <p className="w-full min-h-[1.5em] text-center font-bold text-sm sm:text-md text-zinc-700">
+      <span aria-hidden="true">
+        {text.slice(0, count)}
+        {!isDone && <span className="ml-0.5 inline-block w-px animate-pulse text-zinc-400">|</span>}
+      </span>
+      <VisuallyHidden>{text}</VisuallyHidden>
     </p>
   );
 });

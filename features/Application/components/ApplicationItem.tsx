@@ -6,15 +6,17 @@ import NextImage from 'next/image';
 import { IApplicationItem } from '../types';
 import { ApplicationType } from '../constants';
 
+import { NewTabLabel } from '@/cores/NewTabLabel';
+
 export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumbnailUrl, skills }) => {
   return (
     <Link className="w-full" href={link} rel="noopener noreferrer" target="_blank">
       <div className="border border-zinc-200 hover:border-zinc-300 rounded-2xl overflow-hidden w-full aspect-[16/9]">
         <Image
           isZoomed
-          alt="thumbnail image"
+          alt=""
           as={NextImage}
-          className="w-full !h-full object-cover hover:scale-110"
+          className="w-full !h-full object-cover hover:scale-110 motion-reduce:hover:scale-100"
           classNames={{ wrapper: 'w-full h-full !max-w-full', zoomedWrapper: 'w-full h-full' }}
           height={270}
           quality={40}
@@ -49,7 +51,7 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
         {skills.map((skill) => (
           <Image
             key={skill.name}
-            alt={`${skill.name}のアイコン`}
+            alt={skill.name}
             height={20}
             radius="none"
             src={skill.image}
@@ -58,6 +60,7 @@ export const ApplicationItem = memo<IApplicationItem>(({ name, link, type, thumb
           />
         ))}
       </div>
+      <NewTabLabel />
     </Link>
   );
 });

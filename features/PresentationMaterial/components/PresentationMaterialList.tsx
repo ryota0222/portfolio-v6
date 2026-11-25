@@ -10,10 +10,12 @@ export const PresentationMaterialList = memo(() => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-16 w-full">
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-16 w-full" role="list">
       {latestData.map((item) => (
-        <PresentationMaterialItem key={item.title} {...item} />
+        <li key={item.title}>
+          <PresentationMaterialItem {...item} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 });
