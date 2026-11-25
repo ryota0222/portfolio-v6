@@ -37,6 +37,7 @@ export const siteConfig = {
     qiita: 'https://qiita.com/ryotanny',
     zenn: 'https://zenn.dev/ryota0222',
     note: 'https://note.com/ryotanny',
+    lazurate: 'https://lazurate.co.jp/',
   },
   url: 'https://portfolio.site.ryotanny.com',
 };

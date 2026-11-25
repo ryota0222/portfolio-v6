@@ -75,3 +75,12 @@
     transition: none;
   }
 }
+
+/* 横スクロール領域のスクロールバーを隠す。移動は前後ボタン・スワイプ・左右キーで行う */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

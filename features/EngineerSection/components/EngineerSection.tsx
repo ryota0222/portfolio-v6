@@ -5,13 +5,14 @@ import { memo } from 'react';
 import { Marker } from './Marker';
 
 import { siteConfig } from '@/config/site';
+import { NewTabLabel } from '@/cores/NewTabLabel';
 import { SectionSubTitle } from '@/cores/SectionSubTitle';
 import { SectionTitle } from '@/cores/SectionTitle';
 import { CareerList } from '@/features/Career';
 import { LinkButton } from '@/features/LinkButton';
 
 // Dynamic import
-const WorkList = dynamic(() => import('@/features/Freelance').then((mod) => mod.WorkList), {
+const ProjectList = dynamic(() => import('@/features/Project').then((mod) => mod.ProjectList), {
   ssr: false,
   loading: () => <></>,
 });
@@ -48,27 +49,45 @@ export const EngineerSection = memo(() => {
         </div>
       </section>
       {/*
-       * お仕事依頼
+       * 職務経歴（プロジェクト）
        */}
       <section className="w-full h-full sm:mt-40 mt-24">
-        <SectionSubTitle color="blue">Work with me</SectionSubTitle>
-        <p className="mt-6 text-sm sm:text-md text-zinc-600 leading-relaxed">
-          個人事業主として、要件定義からデザイン、Web・モバイルアプリ開発まで一貫してお引き受けします。
+        <SectionSubTitle color="blue">Projects</SectionSubTitle>
+        <div className="mt-10">
+          <ProjectList />
+        </div>
+      </section>
+      {/*
+       * お仕事依頼
+       */}
+      <section className="w-full sm:mt-40 mt-24 rounded-3xl bg-zinc-50 px-6 py-12 sm:px-12 sm:py-16 flex flex-col items-center text-center">
+        <h3 className="sm:text-3xl text-2xl font-semibold">Work with me</h3>
+        <p className="mt-6 max-w-2xl text-sm sm:text-md text-zinc-600 leading-relaxed">
+          要件定義からデザイン、Web・モバイルアプリ開発まで一貫してお引き受けします。ご契約は
+          <a
+            className="text-blue-600 underline underline-offset-4 decoration-blue-600/40 hover:text-blue-800 hover:decoration-blue-800 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-800"
+            href={siteConfig.links.lazurate}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ラズレイト株式会社
+            <NewTabLabel />
+          </a>
+          ・個人のどちらでも可能です。どちらの場合も、ご相談から設計・実装まで私が直接担当します。
+        </p>
+        <p className="mt-4 max-w-2xl text-sm sm:text-md text-zinc-600 leading-relaxed">
           <Marker>
             スタートアップの新規事業や検証フェーズはもちろん、「アイデアを形にしたい」個人の方のご相談も歓迎します。
           </Marker>
         </p>
         <div className="mt-10">
-          <WorkList />
-        </div>
-        <div className="mt-10 flex justify-center">
           <LinkButton
             isExternal
             href={siteConfig.links.twitter}
             startContent={<NextImage alt="" className="invert" height={24} src="/images/x.svg" width={24} />}
             type="solid"
           >
-            お仕事のご相談はこちら
+            X で相談する
           </LinkButton>
         </div>
       </section>
